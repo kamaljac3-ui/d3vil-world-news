@@ -48,46 +48,79 @@ This site is not trying to cover everything that happened — it's trying
 to cover what actually matters. Passing the source-tier bar in step 2
 makes a claim safe to publish; it does not make it worth publishing.
 Apply this bar per story, per region, before it even gets to sourcing.
+This bar was deliberately widened from an earlier, stricter draft after
+finding that five regions with only mass-casualty/war/leadership-change
+stories left most regions blank most days — the categories below,
+especially the "recurring beats" one, are the fix, not a loophole.
 
-**Qualifies — low end of the bar (still has to clear it, not a lower
-standard):**
+**Qualifies — leadership & state:**
 - A head of state or government loses power: election defeat,
   resignation, ouster, coup, impeachment, assassination.
-- Mass-casualty violence with a real reported toll — an attack, massacre,
-  bombing, or armed clash with dozens or more dead, or a smaller but
-  clearly escalatory attack (e.g. on a capital, a government target, a
-  peacekeeping force).
-- A material rupture between states: trade suspended, diplomatic
-  relations severed or downgraded, new sanctions imposed, an ambassador
-  expelled, a border closed.
+- A notable national election in a major country, even without an
+  incumbent losing.
+- Legal or criminal proceedings against a sitting or former head of
+  state, head of government, or similarly major national figure.
 - A ruling or vote that changes a country's leadership, government, or
   constitutional order (a court removing a president, an election
   voided, a snap dissolution of parliament).
 
-**Qualifies — high end:**
+**Qualifies — violence & conflict:**
+- Mass-casualty violence with a real reported toll — an attack, massacre,
+  bombing, or armed clash with a meaningful death toll, or a smaller but
+  clearly escalatory attack (e.g. on a capital, a government target, a
+  peacekeeping force).
+- Significant civil unrest or protest with real casualties or major
+  disruption (a capital shut down, a government building stormed) —
+  doesn't require a mass-casualty threshold on its own.
 - War: a new offensive, a ceasefire, a major battlefield shift, or a
   war's outbreak.
+
+**Qualifies — state relations & economy:**
+- A material rupture between states: trade suspended, diplomatic
+  relations severed or downgraded, new sanctions imposed, an ambassador
+  expelled, a border closed.
+- A major central bank decision or economic shock with broad
+  international significance (not a routine data print).
+- A significant advance or setback in a major ongoing negotiation —
+  peace talks, a major trade deal — even without final resolution.
+
+**Always qualifies — recurring global beats (these don't need to hit the
+categories above; they're legitimate world news on their own terms):**
 - A natural disaster hitting with major real impact — a hurricane,
   typhoon, earthquake, or tsunami that has actually made landfall/struck
   with casualties or significant displacement, not a forecast or
   warning.
-- A mass-casualty terrorist attack or act of war.
+- A global summit or multilateral proceeding — a climate summit (COP),
+  G7/G20, a UN General Assembly session, a WHO assembly, a major trade
+  bloc negotiation. Cover real developments, disagreements, or
+  announcements from these; they don't need a single tidy "concrete
+  outcome" the way an ordinary diplomatic visit would.
+- A major international sporting event with genuine cross-border/
+  geopolitical reach — a World Cup, the Olympics, a continental
+  championship, a host country's preparations or controversies. This is
+  **not** routine domestic league coverage (NFL, NBA, EPL, etc.) — that
+  stays D3vil Sports' beat, not this site's. It's specifically for
+  events that are themselves world news.
 
-**Does not qualify — leave these out even if wire-sourced and true:**
-- Routine diplomatic statements, visits, or summits without a concrete
-  outcome.
+**Still does not qualify — leave these out even if wire-sourced and
+true:**
+- A routine bilateral visit or photo-op with no summit-level
+  significance and no real development to report.
 - Ordinary court rulings, legislative votes, or policy announcements
-  that don't rise to a leadership/relations/war/disaster scale.
+  below head-of-state/major-figure scale.
 - Routine economic data releases (GDP prints, inflation figures) absent
-  an actual shock or crisis.
-- Isolated local crime, small protests, or minor unrest.
+  an actual shock.
+- Isolated local crime, or small protests without real disruption or
+  casualties.
 - Celebrity, royal, or human-interest stories.
 - Speculative "could happen" pieces — analysis of what a leader might do
   — rather than something that already happened.
 
 A story must clear this bar **and** the sourcing rules in step 2 to run.
-It is normal and correct for most regions to have zero qualifying
-stories on most days — see step 4.6.
+With the "recurring beats" category, a genuinely blank region should be
+rare — there's almost always a summit, disaster, or major international
+sporting storyline somewhere most days. If a region still comes up
+empty after checking all of the above, see step 4.6.
 
 ## 4. Gather material, per region
 
