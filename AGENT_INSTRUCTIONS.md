@@ -269,9 +269,12 @@ git push
 ```
 
 Pushing to `main` triggers the GitHub Pages deployment
-(`.github/workflows/deploy.yml`). **There is no newsletter or audio job
-on this repo yet** — don't send an email or generate audio; those aren't
-wired in until this pipeline has run reliably for a while.
+(`.github/workflows/deploy.yml`). A Kit signup form ("D3vil World News
+form," same Kit account as D3vil Sports, its own separate list/tag) is
+live on the homepage so readers can subscribe — **but there is no
+automated send job wired up yet**. Don't send an email manually or call
+the Kit API; that automation isn't built until this pipeline has run
+reliably for a while, same reasoning as the audio recap on D3vil Sports.
 
 ## 11. If something fails
 

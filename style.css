@@ -233,6 +233,125 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 }
 .notice-box p:last-child { margin-bottom: 0; }
 
+/* Collapsible "Get it in your inbox" box, same interaction as the
+   policy box below it. */
+.subscribe-box {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin-bottom: 20px;
+}
+
+.subscribe-details { list-style: none; }
+.subscribe-details summary::-webkit-details-marker { display: none; }
+.subscribe-details summary::marker { content: ""; }
+
+.subscribe-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.subscribe-toggle-text strong {
+  display: block;
+  font-size: 15.5px;
+  margin-bottom: 2px;
+}
+
+.subscribe-toggle-text span {
+  display: block;
+  color: var(--ink-dim);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.subscribe-toggle-btn {
+  flex: 0 0 auto;
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.subscribe-details[open] .subscribe-toggle-btn { display: none; }
+
+.subscribe-form-wrap {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+/* Kit embed overrides: strip the default template's photo/heading, keep
+   just the functional input + button, restyled to match the paper. */
+.subscribe-form-wrap .formkit-background,
+.subscribe-form-wrap .formkit-header,
+.subscribe-form-wrap .formkit-column:first-child {
+  display: none !important;
+}
+
+.subscribe-form-wrap form > div {
+  display: block !important;
+}
+
+.subscribe-form-wrap .formkit-column:last-child {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.subscribe-form-wrap .seva-fields.formkit-fields {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin: 0 !important;
+}
+
+.subscribe-form-wrap .formkit-field {
+  flex: 1 1 220px !important;
+  margin: 0 !important;
+}
+
+.subscribe-form-wrap .formkit-input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 11px 14px !important;
+  border-radius: 0 !important;
+  border: 1px solid var(--rule) !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-size: 14px !important;
+  font-family: "PT Serif", Georgia, serif !important;
+}
+
+.subscribe-form-wrap .formkit-submit {
+  padding: 11px 20px !important;
+  border-radius: 0 !important;
+  border: none !important;
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif !important;
+  cursor: pointer !important;
+}
+
+.subscribe-form-wrap .formkit-powered-by-convertkit-container {
+  margin-top: 10px !important;
+  opacity: 0.5 !important;
+  transform: scale(0.8) !important;
+  transform-origin: left !important;
+}
+
 /* Collapsible "How we verify" box, same interaction as subscribe box */
 .policy-box {
   background: var(--paper-raised);
