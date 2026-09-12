@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
+<title>D3vil World News — verified dispatches from every continent</title>
+<meta name="description" content="A daily world news briefing built from cross-checked wire reporting — AP, Reuters, AFP — not cable-news commentary. Region by region, sourced line by line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=PT+Serif:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/devil-face.png">
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle day/night edition">
+  <span class="icon-moon">&#127769;</span>
+  <span class="icon-sun">&#9728;</span>
+</button>
+<script>
+function toggleTheme(){
+  var root = document.documentElement;
+  if (root.getAttribute('data-theme') === 'dark') {
+    root.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    root.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+</script>
+
+<div class="top-rule"></div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="meta-row">
+      <span>Wire-verified daily dispatch</span>
+      <span>Vol. I &middot; No. 1 &middot; Free Edition</span>
+    </div>
+    <div class="masthead-row">
+      <img class="mascot" src="assets/devil-mascot.png" alt="D3vil World News mascot">
+    </div>
+    <a class="masthead-link" href="./" style="text-decoration:none;">
+      <div class="masthead" style="text-align:center;">D<span class="accent-char">3</span>VIL WORLD NEWS</div>
+    </a>
+    <div class="tagline">Cross-checked wire reporting from every continent — not cable-news commentary.</div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="regions-legend">
+      <a class="chip" href="#americas">Americas</a>
+      <a class="chip" href="#europe">Europe</a>
+    </div>
+
+    <div class="notice-box">
+      <div class="notice-kicker">Notice to readers</div>
+      <h2>First edition in production</h2>
+      <p>D3vil World News is standing up its verification pipeline before publishing daily. Each story that eventually runs here will be built from primary wire reporting and cross-checked against at least two independent sources before it's posted — no single-outlet claims, no unverified casualty or attribution figures stated as fact.</p>
+      <p>Check back for the first dated edition, or read the sourcing policy below.</p>
+    </div>
+
+    <div class="policy-box">
+      <details class="policy-details">
+        <summary class="policy-toggle">
+          <span class="policy-toggle-text">
+            <strong>How we verify</strong>
+            <span>The sourcing rules every story on this site has to clear.</span>
+          </span>
+          <span class="policy-toggle-btn">Read</span>
+        </summary>
+        <div class="policy-body">
+          <ul>
+            <li><span class="tier-label">Tier 1 — primary</span><br>AP, Reuters, AFP. Every story needs at least one of these underneath it.</li>
+            <li><span class="tier-label">Tier 2 — corroboration only</span><br>Straight-news wires (BBC News, NPR, Al Jazeera, DW) and regional independent press. Usable to confirm a Tier 1 story or add context — never used to originate a claim on its own.</li>
+            <li><span class="tier-label">Not used</span><br>Cable/network commentary-driven outlets (CNN, NBC/MSNBC, Fox and similar). If a story hasn't reached a wire service, it doesn't run here yet.</li>
+            <li><span class="tier-label">Hard rule</span><br>Casualty counts, quotes, and attributions need two or more independent sources in agreement before being stated as fact. A still-developing story says so explicitly rather than getting quietly upgraded to settled fact.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div id="posts">
+      <!-- POSTS:START -->
+      <!-- POSTS:END -->
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="imprint">
+      D3VIL WORLD NEWS is an AI-assisted synthesis of wire reporting (AP, Reuters, AFP),
+      cross-checked before publication. It is not staffed by human reporters and does
+      not conduct original reporting — see "How we verify" above for the full sourcing
+      policy. Est. 2026.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
