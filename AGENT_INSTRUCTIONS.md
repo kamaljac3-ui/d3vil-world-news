@@ -6,7 +6,10 @@ Africa, Asia. Verification matters far more here than on D3vil Sports: a
 wrong score is embarrassing, a wrong casualty count or misattributed
 quote is a real credibility and liability problem. When in doubt, cut
 the story rather than run it thin — it's fine, even expected, for a
-region to come up short on a genuinely quiet day (see step 3.6).
+region to come up short, or entirely empty, on a genuinely quiet day
+(see step 4.6). This site runs on two independent gates, and a story
+needs to clear **both** before it's included: the source-tier rules in
+step 2, and the significance bar in step 3.
 
 ## 1. Figure out "today"
 
@@ -39,7 +42,54 @@ stop — today's edition is already done, do not duplicate it.
   directly quoted/reported. Don't infer why someone acted unless a source
   states it explicitly and it's attributed to them, not asserted as fact.
 
-## 3. Gather material, per region
+## 3. Significance bar — what actually counts as a story
+
+This site is not trying to cover everything that happened — it's trying
+to cover what actually matters. Passing the source-tier bar in step 2
+makes a claim safe to publish; it does not make it worth publishing.
+Apply this bar per story, per region, before it even gets to sourcing.
+
+**Qualifies — low end of the bar (still has to clear it, not a lower
+standard):**
+- A head of state or government loses power: election defeat,
+  resignation, ouster, coup, impeachment, assassination.
+- Mass-casualty violence with a real reported toll — an attack, massacre,
+  bombing, or armed clash with dozens or more dead, or a smaller but
+  clearly escalatory attack (e.g. on a capital, a government target, a
+  peacekeeping force).
+- A material rupture between states: trade suspended, diplomatic
+  relations severed or downgraded, new sanctions imposed, an ambassador
+  expelled, a border closed.
+- A ruling or vote that changes a country's leadership, government, or
+  constitutional order (a court removing a president, an election
+  voided, a snap dissolution of parliament).
+
+**Qualifies — high end:**
+- War: a new offensive, a ceasefire, a major battlefield shift, or a
+  war's outbreak.
+- A natural disaster hitting with major real impact — a hurricane,
+  typhoon, earthquake, or tsunami that has actually made landfall/struck
+  with casualties or significant displacement, not a forecast or
+  warning.
+- A mass-casualty terrorist attack or act of war.
+
+**Does not qualify — leave these out even if wire-sourced and true:**
+- Routine diplomatic statements, visits, or summits without a concrete
+  outcome.
+- Ordinary court rulings, legislative votes, or policy announcements
+  that don't rise to a leadership/relations/war/disaster scale.
+- Routine economic data releases (GDP prints, inflation figures) absent
+  an actual shock or crisis.
+- Isolated local crime, small protests, or minor unrest.
+- Celebrity, royal, or human-interest stories.
+- Speculative "could happen" pieces — analysis of what a leader might do
+  — rather than something that already happened.
+
+A story must clear this bar **and** the sourcing rules in step 2 to run.
+It is normal and correct for most regions to have zero qualifying
+stories on most days — see step 4.6.
+
+## 4. Gather material, per region
 
 Cover all five, in this order: **Americas, Europe, Middle East, Africa,
 Asia**. (Middle East and Africa are kept separate rather than combined —
@@ -65,17 +115,18 @@ For each region:
    story can still be a year stale. If you can reach the actual article,
    check its dateline. Don't infer recency from a headline or snippet
    alone.
-5. From everything gathered, pick the 3-5 most substantial, verified
-   stories per region — the ones that actually matter, not just
-   whatever's most search-engine-visible. It's fine for a region to run
-   with 1-2 stories on a genuinely quiet day; don't pad with marginal
-   items to hit a number.
-6. If nothing in a region clears the two-source bar that day, the section
-   still appears (for the jump-nav anchor) with a single line: "Nothing
-   met this edition's verification bar today." Do not lower the bar to
-   fill space.
+5. Include every story from that region that clears **both** the
+   significance bar (step 3) and the two-source verification bar
+   (step 2) — don't cap at a fixed count, and don't pad with marginal
+   items to hit one. A heavy-news day might produce four qualifying
+   stories in one region; a quiet day might produce zero across several
+   regions. Both outcomes are correct.
+6. If nothing in a region clears both bars that day, the section still
+   appears (for the jump-nav anchor) with a single line: "Nothing met
+   this edition's bar for significance and verification today." Do not
+   lower either bar to fill space.
 
-## 4. Write it up — rules (non-negotiable)
+## 5. Write it up — rules (non-negotiable)
 
 - Every story in your own original words — 2-3 sentences on what
   happened and why it matters. Never copy sentences from a source.
@@ -87,7 +138,7 @@ For each region:
   of one side of a conflict/dispute, no adjectives implying a verdict the
   sources themselves haven't reached.
 
-## 5. Build today's post page
+## 6. Build today's post page
 
 Copy an existing `posts/<date>.html` as a structural template once one
 exists (until then, build from `index.html`'s head/theme-toggle
@@ -114,7 +165,7 @@ own line: `<span class="unconfirmed">Not yet independently confirmed.</span>`
 - `.post-header .date` / `<h1>`: human-readable date and an actual
   headline for the day's lead story (not "Daily Edition").
 
-## 6. Add the entry to the homepage
+## 7. Add the entry to the homepage
 
 Insert a new `.post-card` right after `<!-- POSTS:START -->` in
 `index.html` (newest first):
@@ -127,16 +178,16 @@ Insert a new `.post-card` right after `<!-- POSTS:START -->` in
 </a>
 ```
 
-Leave earlier cards in place — pruning happens in step 8.
+Leave earlier cards in place — pruning happens in step 9.
 
-## 7. Update the "latest" alias
+## 8. Update the "latest" alias
 
 ```
 cp posts/<date>.html posts/latest.html
 ```
 (PowerShell: `Copy-Item posts/<date>.html posts/latest.html -Force`.)
 
-## 8. Enforce 7-day retention
+## 9. Enforce 7-day retention
 
 Same policy as D3vil Sports — keep only the 7 most recent dated posts.
 
@@ -148,7 +199,7 @@ For each file that comes back: `git rm posts/<date>.html`, and remove its
 matching `.post-card` block from `index.html`. If there are 7 or fewer
 dated posts total, skip this step.
 
-## 9. Commit and push
+## 10. Commit and push
 
 ```
 git add index.html posts/
@@ -161,11 +212,11 @@ Pushing to `main` triggers the GitHub Pages deployment
 on this repo yet** — don't send an email or generate audio; those aren't
 wired in until this pipeline has run reliably for a while.
 
-## 10. If something fails
+## 11. If something fails
 
-If a wire feed is unreachable or nothing clears the two-source bar for a
-region, don't block the whole edition — use the "nothing met the
-verification bar" line for that region and continue. Always commit and
-push whatever was successfully verified. When genuinely unsure whether a
-story clears the bar, leave it out — the cost of a missed story is much
-lower than the cost of a wrong one here.
+If a wire feed is unreachable or nothing clears both bars for a region,
+don't block the whole edition — use the "nothing met this edition's bar"
+line for that region and continue. Always commit and push whatever was
+successfully verified. When genuinely unsure whether a story clears
+either bar, leave it out — the cost of a missed story is much lower than
+the cost of a wrong or trivial one here.
