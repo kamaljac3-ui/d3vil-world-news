@@ -23,10 +23,18 @@ stop — today's edition is already done, do not duplicate it.
   it doesn't run — no exceptions, no matter how widely a non-wire outlet
   is reporting it.
 - **Tier 2 — corroboration only.** Straight-news wires and desks (BBC
-  News, NPR, Al Jazeera's hard-news reporting, DW) and regional
-  independent press. Usable to confirm a Tier 1 story or add on-the-ground
-  context. **Never** the sole basis for a claim — a Tier 2-only story
-  doesn't run yet either.
+  News, NPR, Al Jazeera's hard-news reporting, DW, Al Arabiya English,
+  Arab News) and regional independent press. Usable to confirm a Tier 1
+  story or add on-the-ground context. **Never** the sole basis for a
+  claim — a Tier 2-only story doesn't run yet either.
+- **Preference on Middle East sourcing.** For anything touching
+  Israel/Lebanon/Gaza, prefer Tier 1 wires and pan-Arab desks (Al
+  Jazeera, Al Arabiya, Arab News) over Israeli outlets (Times of Israel,
+  Haaretz, Jerusalem Post) when a claim is covered by both — this is a
+  deliberate editorial choice, not a sourcing-quality judgment. Israeli
+  outlets aren't banned and can still corroborate a claim if nothing
+  else does, but they shouldn't be the visible citation when an
+  alternative exists.
 - **Denylist.** CNN, NBC/MSNBC, Fox, and similar cable/network
   commentary-driven outlets. Don't cite them, don't use them even as a
   tiebreaker. (They mostly repackage the same wire copy anyway — if the
@@ -97,6 +105,15 @@ especially the "recurring beats" one, are the fix, not a loophole.
 
 **Always qualifies — recurring global beats (these don't need to hit the
 categories above; they're legitimate world news on their own terms):**
+- A landmark, round-number anniversary of a globally significant historic
+  event (a 25th, 50th, etc.) with an official national or international
+  commemoration — found missing from this list during the first real run
+  (2026-09-12) when the 25th anniversary of 9/11 fell on the edition's
+  own coverage day and got skipped for not fitting any other category.
+  Cite the event's own official source (a memorial institution, a
+  government commemoration page) alongside a Tier 1/2 news outlet where
+  one exists — an official program page is a legitimate primary source
+  for describing what the ceremony itself is and when it happens.
 - A natural disaster hitting with major real impact — a hurricane,
   typhoon, earthquake, or tsunami that has actually made landfall/struck
   with casualties or significant displacement, not a forecast or
