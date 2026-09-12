@@ -1,28 +1,29 @@
 /* D3vil World News — shared styles
-   Look and feel: an old broadsheet, black & white, ~50 years worn.
+   Look and feel: broadsheet black/white/gray, in the register of a
+   serious paper of record — crisp newsprint, not an aged/sepia look.
    Default theme IS the "paper" look (unlike D3vil Sports, which defaults
-   dark) — the toggle here switches to a "night edition" (microfilm-style
+   dark) — the toggle here switches to a "night edition" (true grayscale
    negative), not a bright light mode. */
 
 :root {
-  --paper: #ece3ce;
-  --paper-raised: #e3d8bd;
-  --paper-elevated: #efe7d2;
-  --rule: #2a2621;
-  --ink: #201d18;
-  --ink-dim: #5c5647;
-  --stamp: #8a3324; /* the one non-grayscale color: a faded rubber-stamp red, used sparingly */
+  --paper: #ffffff;
+  --paper-raised: #f2f2f2;
+  --paper-elevated: #f7f7f7;
+  --rule: #121212;
+  --ink: #111111;
+  --ink-dim: #6e6e6e;
+  --stamp: #b3261e; /* the one non-grayscale color: a muted newsprint red, used sparingly */
 }
 
 :root[data-theme="dark"] {
-  /* "Night edition" — reading it on microfilm, not a modern light mode */
-  --paper: #17150f;
-  --paper-raised: #1f1c15;
-  --paper-elevated: #211e17;
-  --rule: #cfc6ab;
-  --ink: #e8dfc4;
-  --ink-dim: #a99f83;
-  --stamp: #c26652;
+  /* "Night edition" — a true grayscale negative, not a modern light mode */
+  --paper: #121212;
+  --paper-raised: #1a1a1a;
+  --paper-elevated: #1e1e1e;
+  --rule: #e8e8e8;
+  --ink: #f2f2f2;
+  --ink-dim: #a3a3a3;
+  --stamp: #e0554a;
 }
 
 .theme-toggle {
@@ -65,31 +66,29 @@ body {
   position: relative;
 }
 
-/* Aged-paper grain + foxing, layered as a fixed overlay so it doesn't
-   scroll with content and stays cheap to render. */
+/* Faint newsprint grain — a real paper of record has texture, but this
+   stays neutral gray, not sepia/aged. */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 40;
-  opacity: 0.5;
+  opacity: 0.25;
   mix-blend-mode: multiply;
   background-image:
-    radial-gradient(420px 320px at 8% 12%, rgba(120, 90, 50, 0.10), transparent 60%),
-    radial-gradient(500px 380px at 92% 85%, rgba(120, 90, 50, 0.09), transparent 60%),
-    radial-gradient(300px 300px at 70% 15%, rgba(90, 70, 40, 0.06), transparent 65%),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.35'/></svg>");
 }
 
-:root[data-theme="dark"] body::before { opacity: 0.35; mix-blend-mode: screen; }
+:root[data-theme="dark"] body::before { opacity: 0.18; mix-blend-mode: screen; }
 
 h1, h2, h3, .brand, .masthead {
   font-family: "Playfair Display", "PT Serif", Georgia, serif;
 }
 
 .wire, .kicker, .dateline, .meta-row, .story .src, .imprint {
-  font-family: "Special Elite", "Courier New", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
 }
 
 a { color: inherit; }
@@ -151,9 +150,11 @@ header.site {
 }
 
 .masthead .accent-char {
-  font-family: "Special Elite", monospace;
-  font-size: 0.72em;
-  vertical-align: 2px;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 0.62em;
+  vertical-align: 4px;
+  color: var(--stamp);
 }
 
 .tagline {
@@ -176,7 +177,8 @@ main { padding: 28px 0 80px; }
 
 .chip {
   display: inline-block;
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.03em;
   padding: 5px 12px;
@@ -210,7 +212,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 .notice-box::after { bottom: 4px; }
 
 .notice-kicker {
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -267,7 +270,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
   flex: 0 0 auto;
   padding: 6px 14px;
   border: 1px solid var(--rule);
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -285,7 +289,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 .policy-body ul { margin: 0; padding-left: 20px; }
 .policy-body li { margin-bottom: 8px; }
 .policy-body .tier-label {
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
   color: var(--stamp);
@@ -307,7 +312,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 .post-card:first-child { border-top: none; }
 
 .post-card .date {
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -332,7 +338,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 .post-header { margin-bottom: 26px; border-bottom: 1px solid var(--rule); padding-bottom: 18px; }
 
 .post-header .date {
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -348,7 +355,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 .back-link {
   display: inline-block;
   margin-bottom: 22px;
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 12.5px;
   color: var(--ink-dim);
   text-decoration: none;
@@ -368,7 +376,8 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 }
 
 .jump-nav a {
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
   text-decoration: none;
@@ -387,8 +396,12 @@ a.chip:hover { background: var(--paper-elevated); color: var(--ink); border-colo
 }
 
 .region-section h2 {
-  font-family: "Special Elite", monospace;
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
   font-size: 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--rule);
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0 0 16px;

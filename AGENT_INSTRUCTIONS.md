@@ -1,12 +1,12 @@
 # D3vil World News — daily update procedure
 
 This file is the complete, self-contained procedure for producing one
-day's edition. It is a pilot: **two regions only** (Americas, Europe) —
-do not add Middle East & Africa or Asia-Pacific until this procedure has
-run cleanly for a while. Verification matters far more here than on
-D3vil Sports: a wrong score is embarrassing, a wrong casualty count or
-misattributed quote is a real credibility and liability problem. When in
-doubt, cut the story rather than run it thin.
+day's edition, across **five regions**: Americas, Europe, Middle East,
+Africa, Asia. Verification matters far more here than on D3vil Sports: a
+wrong score is embarrassing, a wrong casualty count or misattributed
+quote is a real credibility and liability problem. When in doubt, cut
+the story rather than run it thin — it's fine, even expected, for a
+region to come up short on a genuinely quiet day (see step 3.6).
 
 ## 1. Figure out "today"
 
@@ -41,7 +41,11 @@ stop — today's edition is already done, do not duplicate it.
 
 ## 3. Gather material, per region
 
-Cover both, in this order: **Americas, Europe**.
+Cover all five, in this order: **Americas, Europe, Middle East, Africa,
+Asia**. (Middle East and Africa are kept separate rather than combined —
+lumping them together tends to under-cover one or the other. "Asia"
+here means all of Asia-Pacific: East Asia, South Asia, Southeast Asia,
+and Oceania.)
 
 For each region:
 
@@ -88,10 +92,11 @@ For each region:
 Copy an existing `posts/<date>.html` as a structural template once one
 exists (until then, build from `index.html`'s head/theme-toggle
 boilerplate). Keep: the same `<head>` font links, the theme-toggle
-`<script>` and button, the `.top-rule` div, and a `.jump-nav` with two
-anchors (Americas, Europe). Use two `<section class="region-section"
-id="americas">` / `id="europe">` blocks, each containing that region's
-`.story` divs:
+`<script>` and button, the `.top-rule` div, and a `.jump-nav` with five
+anchors (Americas, Europe, Middle East, Africa, Asia). Use five
+`<section class="region-section" id="...">` blocks — ids `americas`,
+`europe`, `middle-east`, `africa`, `asia`, in that order — each
+containing that region's `.story` divs:
 
 ```html
 <div class="story">
@@ -118,7 +123,7 @@ Insert a new `.post-card` right after `<!-- POSTS:START -->` in
 <a class="post-card" href="posts/<date>.html">
   <div class="date">Month D, YYYY</div>
   <h2>Same headline as the post page</h2>
-  <p>One-sentence teaser across both regions.</p>
+  <p>One-sentence teaser spanning the day's most important regions.</p>
 </a>
 ```
 
