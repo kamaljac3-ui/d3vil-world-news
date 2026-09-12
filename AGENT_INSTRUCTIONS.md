@@ -41,6 +41,17 @@ stop — today's edition is already done, do not duplicate it.
 - **No motive/intent speculation.** Report what happened and what was
   directly quoted/reported. Don't infer why someone acted unless a source
   states it explicitly and it's attributed to them, not asserted as fact.
+- **Practical note: apnews.com and reuters.com are not directly
+  fetchable** by this pipeline's web tools (both block the crawler
+  outright — confirmed during the first real run, 2026-09-12). This
+  doesn't relax the Tier 1 requirement; it just changes how you satisfy
+  it. In practice: search for outlets that explicitly attribute a claim
+  to AP or Reuters by name ("Reuters reports...", "...told The
+  Associated Press"), or that are themselves wire-style pickups of AP/
+  Reuters copy (many national outlets republish it close to verbatim
+  with attribution), and link to that accessible page. The bar is still
+  "a Tier 1 wire actually reported this," not "I found a page that says
+  so" — don't relax that just because the wire's own site is unreachable.
 
 ## 3. Significance bar — what actually counts as a story
 
