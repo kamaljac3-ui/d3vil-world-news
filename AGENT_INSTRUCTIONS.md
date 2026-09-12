@@ -158,6 +158,19 @@ lumping them together tends to under-cover one or the other. "Asia"
 here means all of Asia-Pacific: East Asia, South Asia, Southeast Asia,
 and Oceania.)
 
+**Americas means all of it, deliberately.** A generic "Americas news"
+search skews heavily toward the US and, to a lesser extent, Canada —
+this produced an Americas section with nothing in it on 2026-09-12,
+even though the same day had two genuinely significant, easily-findable
+stories in Chile and Argentina once someone actually looked. Central
+and South America together cover more countries than any other region
+on this site — an empty or US-only Americas section is far more likely
+to be a research gap than an actually quiet day. Every edition, run
+targeted searches for Central America and South America specifically
+(not just a broad "Americas" query), and check at minimum: Mexico,
+Brazil, Argentina, Colombia, and whichever other countries have an
+ongoing major storyline (elections, unrest, disputes, disasters).
+
 For each region:
 
 1. Check AP, Reuters, and AFP's world/region news feeds directly — not
