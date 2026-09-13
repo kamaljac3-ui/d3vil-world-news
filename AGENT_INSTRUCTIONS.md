@@ -49,17 +49,28 @@ stop — today's edition is already done, do not duplicate it.
 - **No motive/intent speculation.** Report what happened and what was
   directly quoted/reported. Don't infer why someone acted unless a source
   states it explicitly and it's attributed to them, not asserted as fact.
-- **Practical note: apnews.com and reuters.com are not directly
-  fetchable** by this pipeline's web tools (both block the crawler
-  outright — confirmed during the first real run, 2026-09-12). This
-  doesn't relax the Tier 1 requirement; it just changes how you satisfy
-  it. In practice: search for outlets that explicitly attribute a claim
-  to AP or Reuters by name ("Reuters reports...", "...told The
-  Associated Press"), or that are themselves wire-style pickups of AP/
-  Reuters copy (many national outlets republish it close to verbatim
-  with attribution), and link to that accessible page. The bar is still
-  "a Tier 1 wire actually reported this," not "I found a page that says
-  so" — don't relax that just because the wire's own site is unreachable.
+- **Practical note: WebFetch does not work in the scheduled cloud
+  routine's environment, for almost any news domain — not just AP and
+  Reuters.** Confirmed 2026-09-13: the automated run's own connectivity
+  test found aljazeera.com, arabnews.com, bbc.com, dw.com, npr.org,
+  abcnews.com, thehill.com, kathmandupost.com — even google.com and
+  example.com as controls — all returned `EGRESS_BLOCKED`/403 from that
+  sandbox's network proxy. This is a stronger restriction than an
+  earlier version of this note suggested (which only called out AP/
+  Reuters specifically) — in the cloud routine, treat WebFetch as
+  unusable for sourcing, full stop. **Do not spend any budget trying it
+  or re-trying it "just in case"** — on 2026-09-13 the routine burned
+  several minutes and a meaningful chunk of its rate-limit budget
+  attempting WebFetch verification calls that failed one after another,
+  then hit its session limit before it had written or pushed anything at
+  all, so the entire edition silently never happened. Rely entirely on
+  WebSearch result snippets — they do surface and quote wire
+  attribution directly ("Reuters reports...", "...told The Associated
+  Press", a URL path like `/wireStory/` or `ap-international`) — and
+  treat that as sufficient to satisfy Tier 1, without a WebFetch
+  double-check step. Once every region has reported candidates back,
+  go straight to compiling and writing — an extra verification pass is
+  not worth risking the whole edition over.
 
 ## 3. Significance bar — what actually counts as a story
 
