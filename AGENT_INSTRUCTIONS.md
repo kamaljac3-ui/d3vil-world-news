@@ -182,6 +182,19 @@ targeted searches for Central America and South America specifically
 Brazil, Argentina, Colombia, and whichever other countries have an
 ongoing major storyline (elections, unrest, disputes, disasters).
 
+**Asia needs the same treatment, added 2026-09-14.** A generic "Asia
+Pacific news" search skews heavily toward business/markets coverage
+(indices, chip stocks, central-bank-adjacent stories) — the same
+failure mode that produced the empty Americas section on 2026-09-12,
+just less visible because a market story fills the search results
+instead of leaving it obviously blank. Asia-Pacific covers more
+countries and more population than any other region on this site.
+Every edition, run targeted searches by sub-region rather than one
+broad "Asia" query, and check at minimum: China, Japan, the two
+Koreas, India, Southeast Asia (Indonesia, Philippines, Myanmar,
+Thailand, Vietnam), and the Pacific Islands — not just whichever
+country dominates the business-news cycle that day.
+
 For each region:
 
 1. Check AP, Reuters, and AFP's world/region news feeds directly — not
