@@ -36,7 +36,44 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # No newsletter or recap job yet, unlike D3vil Sports — this repo is a
-  # pilot for the verification pipeline itself. Add those only once the
-  # daily edition has run reliably for a while and the sourcing rules in
-  # AGENT_INSTRUCTIONS.md have proven out in practice.
+  newsletter:
+    # Only ever fires on a real push to main — never on a manual
+    # workflow_dispatch re-run. The "detect newly added post" step has no
+    # memory of whether a broadcast was already sent for that post, so
+    # re-running this job manually on the same commit re-sends a brand new
+    # broadcast to every subscriber each time. Manual re-runs are for
+    # testing the deploy job only; test the newsletter HTML locally with
+    # `node -e "require('./scripts/send-newsletter.js').buildEmailHtml(...)"`
+    # instead, which never touches the live Kit API. Mirrors D3vil Sports'
+    # newsletter job exactly, added 2026-09-14 — see scripts/send-newsletter.js
+    # for the subscriber-tag scoping that keeps this list separate from Sports'.
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect newly added post
+        id: detect
+        run: |
+          NEW_POST=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'posts/*.html' | grep -v '^posts/latest.html$' | head -n1)
+          if [ -z "$NEW_POST" ]; then
+            echo "No new post in this push — skipping newsletter send."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "New post detected: $NEW_POST"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "file=$NEW_POST" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send newsletter
+        if: steps.detect.outputs.found == 'true'
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          POST_FILE: ${{ steps.detect.outputs.file }}
+        run: node scripts/send-newsletter.js
+
+  # No audio recap job — explicitly out of scope for this site (D3vil
+  # Sports has the weekly recap; this one was never meant to).

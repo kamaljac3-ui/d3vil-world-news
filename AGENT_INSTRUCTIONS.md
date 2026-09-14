@@ -293,12 +293,27 @@ git push
 ```
 
 Pushing to `main` triggers the GitHub Pages deployment
-(`.github/workflows/deploy.yml`). A Kit signup form ("D3vil World News
-form," same Kit account as D3vil Sports, its own separate list/tag) is
-live on the homepage so readers can subscribe — **but there is no
-automated send job wired up yet**. Don't send an email manually or call
-the Kit API; that automation isn't built until this pipeline has run
-reliably for a while, same reasoning as the audio recap on D3vil Sports.
+(`.github/workflows/deploy.yml`), which also runs a `newsletter` job
+(added 2026-09-14, mirrors D3vil Sports' exactly) — it detects a newly
+added post in the push and sends it via Kit, scoped to the
+`world-news-subscriber` tag only (id 23371637) via `subscriber_filter`
+in `scripts/send-newsletter.js`. **Do not manually re-run the workflow
+or call the Kit API directly** — same anti-duplicate reasoning as
+Sports' job; test newsletter HTML locally with `node -e
+"require('./scripts/send-newsletter.js').buildEmailHtml('posts/<date>.html')"`,
+which never touches the live API.
+
+**Known gap: new subscribers aren't auto-tagged.** D3vil Sports has a
+Kit Visual Automation that auto-tags new signups, but the account's
+plan caps Visual Automations at 1 (already used by Sports) and the
+older Rules feature is also plan-gated — so there's currently no
+automated way to tag new `world-news-subscriber` signups. Until the
+plan is upgraded or a workaround exists, new World News subscribers
+need to be tagged manually in Kit, or they'll never receive a
+broadcast (the filter only reaches tagged subscribers, so an untagged
+signup is silently excluded rather than wrongly included — safe by
+default, but worth checking on periodically). There is still no audio
+recap job — explicitly out of scope for this site.
 
 ## 11. If something fails
 
