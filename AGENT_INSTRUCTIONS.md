@@ -295,25 +295,38 @@ git push
 Pushing to `main` triggers the GitHub Pages deployment
 (`.github/workflows/deploy.yml`), which also runs a `newsletter` job
 (added 2026-09-14, mirrors D3vil Sports' exactly) — it detects a newly
-added post in the push and sends it via Kit, scoped to the
-`world-news-subscriber` tag only (id 23371637) via `subscriber_filter`
-in `scripts/send-newsletter.js`. **Do not manually re-run the workflow
-or call the Kit API directly** — same anti-duplicate reasoning as
-Sports' job; test newsletter HTML locally with `node -e
+added post in the push and sends it via Kit. **Do not manually re-run
+the workflow or call the Kit API directly** — same anti-duplicate
+reasoning as Sports' job; test newsletter HTML locally with `node -e
 "require('./scripts/send-newsletter.js').buildEmailHtml('posts/<date>.html')"`,
 which never touches the live API.
+
+**Audience: sent to the whole Kit account, not just this site's tag
+(changed 2026-09-14, kamal's explicit choice).** The broadcast used to
+be scoped to the `world-news-subscriber` tag (id 23371637) only via
+`subscriber_filter` in `scripts/send-newsletter.js`, matching
+D3vil Sports' equivalent scoping to `sports-subscriber` (id 23371585).
+That got dropped from both scripts the same day because World News
+still has no working auto-tag automation (see the gap below) and the
+tag filter was silently excluding real subscribers who never got
+tagged. Until auto-tagging is fixed, both D3vil Sports and D3vil World
+News broadcasts go to every subscriber on the account, sports fans and
+world-news readers alike. If the two audiences are ever meant to
+diverge again, restore the `subscriber_filter` block (see git history
+around 2026-09-14 in this file, or D3vil Sports' equivalent script) in
+both scripts together — not just one, or they'll disagree on scope.
 
 **Known gap: new subscribers aren't auto-tagged.** D3vil Sports has a
 Kit Visual Automation that auto-tags new signups, but the account's
 plan caps Visual Automations at 1 (already used by Sports) and the
 older Rules feature is also plan-gated — so there's currently no
-automated way to tag new `world-news-subscriber` signups. Until the
-plan is upgraded or a workaround exists, new World News subscribers
-need to be tagged manually in Kit, or they'll never receive a
-broadcast (the filter only reaches tagged subscribers, so an untagged
-signup is silently excluded rather than wrongly included — safe by
-default, but worth checking on periodically). There is still no audio
-recap job — explicitly out of scope for this site.
+automated way to tag new `world-news-subscriber` signups. This no
+longer affects who *receives* the newsletter (see above — everyone
+gets it regardless of tag for now), but the tags are still useful for
+manually auditing/segmenting the list later, so keep tagging new World
+News signups by hand when you notice them until the plan is upgraded
+or a workaround exists. There is still no audio recap job —
+explicitly out of scope for this site.
 
 ## 11. If something fails
 

@@ -9,15 +9,15 @@
 // is a web-safe serif that renders consistently everywhere and gives the
 // newspaper feel without relying on a web font load.
 //
-// IMPORTANT: this broadcast is scoped to the "world-news-subscriber" tag
-// (id 23371637) only — this Kit account also holds D3vil Sports
-// subscribers under a separate "sports-subscriber" tag (23371585), and the
-// two lists must never cross-pollinate. Unlike D3vil Sports, there is
-// currently no Kit automation auto-tagging new signups with
-// "world-news-subscriber" (the account's plan caps Visual Automations at 1,
-// already used by Sports, and the older Rules feature is also plan-gated).
-// New World News subscribers need to be tagged manually in Kit until the
-// plan is upgraded or a workaround is built — check periodically.
+// IMPORTANT: as of 2026-09-14 this broadcast is sent to the WHOLE Kit
+// account (no subscriber_filter), not just a "world-news-subscriber" tag —
+// see the note above main()'s broadcast body for why. Briefly: there is no
+// Kit automation auto-tagging new World News signups (the account's plan
+// caps Visual Automations at 1, already used by Sports, and the older
+// Rules feature is also plan-gated), so tag-scoping was silently excluding
+// real subscribers. D3vil Sports' script made the same change the same
+// day. Revisit once auto-tagging is fixed or the two lists are meant to
+// diverge again.
 
 const fs = require("fs");
 
@@ -189,12 +189,13 @@ async function main() {
       description: `Auto-sent for ${postFile}`,
       public: false,
       send_at: new Date().toISOString(),
-      // Scoped to the "world-news-subscriber" tag only (id 23371637) —
-      // never to the whole account, which also holds D3vil Sports
-      // subscribers under a separate tag. See the file header note above.
-      subscriber_filter: [
-        { all: [{ type: "tag", ids: [23371637] }] },
-      ],
+      // DELIBERATELY UNSCOPED (whole account) as of 2026-09-14, by kamal's
+      // explicit choice — see the matching note in D3vil Sports'
+      // send-newsletter.js and AGENT_INSTRUCTIONS.md's newsletter section.
+      // Short version: this site still has no working auto-tag automation
+      // (Kit's 1-Visual-Automation plan cap already used by Sports), so
+      // tag-scoping was silently excluding real World News subscribers.
+      // Both sites now send to everyone on the account until that's fixed.
     }),
   });
 
