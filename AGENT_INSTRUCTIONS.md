@@ -18,15 +18,43 @@ stop — today's edition is already done, do not duplicate it.
 
 ## 2. Source tiers (non-negotiable)
 
-- **Tier 1 — primary.** AP, Reuters, AFP. Every story needs at least one
-  of these underneath it. If a story hasn't reached a wire service yet,
-  it doesn't run — no exceptions, no matter how widely a non-wire outlet
-  is reporting it.
+- **Tier 1 — primary.** AP, Reuters, AFP, plus other countries' own
+  national wire services — journalistically equivalent, just not
+  English-first: **Kyodo News** (Japan), **Yonhap** (South Korea),
+  **PTI** (India), **Antara** (Indonesia), **dpa** (Germany), **ANSA**
+  (Italy), **EFE** (Spain — also the deepest wire coverage of Latin
+  America), and **The Canadian Press** (Canada — AP's exclusive
+  domestic distributor there). Added 2026-09-15 after the Java Sea
+  ferry disaster got missed on an Asia pass despite the right search
+  query — a national wire in the story's own region often surfaces
+  something faster than a generic international search does. Every
+  story still needs at least one of these underneath it. If a story
+  hasn't reached any wire service yet, it doesn't run — no exceptions,
+  no matter how widely a non-wire outlet is reporting it.
 - **Tier 2 — corroboration only.** Straight-news wires and desks (BBC
   News, NPR, Al Jazeera's hard-news reporting, DW, Al Arabiya English,
-  Arab News) and regional independent press. Usable to confirm a Tier 1
-  story or add on-the-ground context. **Never** the sole basis for a
-  claim — a Tier 2-only story doesn't run yet either.
+  Arab News) and regional independent press — including, added
+  2026-09-15: **The New Humanitarian** (crisis/disaster/displacement
+  reporting, often ahead of Tier 1 on under-covered regions),
+  **allAfrica.com** (an aggregator of African papers, not a source in
+  its own right — cite the underlying paper it's carrying when
+  possible), **BenarNews** (Southeast Asia security/politics),
+  **Nikkei Asia**, **MercoPress** and **Buenos Aires Times** (South
+  America/South Atlantic, English-language), **Mexico News Daily**,
+  **The Tico Times** (Costa Rica), **Prensa Libre** (Guatemala/Central
+  America), and **InSight Crime** (Latin American organized-crime and
+  security reporting — note: independent, field-researched, but rated
+  left-center leaning by media-bias trackers, so pair its claims with a
+  wire source rather than leaning on it alone). Usable to confirm a
+  Tier 1 story or add on-the-ground context. **Never** the sole basis
+  for a claim — a Tier 2-only story doesn't run yet either.
+- **Not credible regardless of "non-mainstream" framing: state-run
+  outlets.** RT, Xinhua, CGTN, Press TV, Prensa Latina (Cuba), and
+  similar state-controlled agencies are excluded the same way the
+  Denylist excludes CNN/Fox — being outside the Western mainstream
+  press doesn't make an outlet independent. A story only they're
+  carrying doesn't run; treat their reporting the same as an
+  unconfirmed rumor even when it turns out true later.
 - **Preference on Middle East sourcing.** For anything touching
   Israel/Lebanon/Gaza, prefer Tier 1 wires and pan-Arab desks (Al
   Jazeera, Al Arabiya, Arab News) over Israeli outlets (Times of Israel,
@@ -181,6 +209,14 @@ targeted searches for Central America and South America specifically
 (not just a broad "Americas" query), and check at minimum: Mexico,
 Brazil, Argentina, Colombia, and whichever other countries have an
 ongoing major storyline (elections, unrest, disputes, disasters).
+**Canada is part of this region too and gets skipped just as easily** —
+check it explicitly rather than assuming "Americas" coverage caught it;
+The Canadian Press (Tier 1, step 2) is the fastest way to check. For
+Central/South America specifically, EFE (Tier 1) usually has deeper
+wire coverage than AP/Reuters alone, and MercoPress, Buenos Aires
+Times, Mexico News Daily, The Tico Times, and InSight Crime (all
+Tier 2 — see step 2 for InSight Crime's caveat) are worth a direct
+check even when a generic search comes up empty.
 
 **Asia needs the same treatment, added 2026-09-14.** A generic "Asia
 Pacific news" search skews heavily toward business/markets coverage
@@ -193,7 +229,14 @@ Every edition, run targeted searches by sub-region rather than one
 broad "Asia" query, and check at minimum: China, Japan, the two
 Koreas, India, Southeast Asia (Indonesia, Philippines, Myanmar,
 Thailand, Vietnam), and the Pacific Islands — not just whichever
-country dominates the business-news cycle that day.
+country dominates the business-news cycle that day. **Even the right
+sub-region query can still miss a real story** — a Java Sea ferry
+disaster (129 missing) slipped through on 2026-09-15 despite a
+correctly-targeted Southeast Asia search that day. When a sub-region
+search comes back with nothing but routine business/politics, also
+check that sub-region's own national wire directly (Kyodo News for
+Japan, Yonhap for Korea, PTI for India, Antara for Indonesia — see
+step 2) rather than trusting one search's results as exhaustive.
 
 For each region:
 
