@@ -1,31 +1,39 @@
-# StateForty8 World News — daily update procedure
+# 48th State World News — daily update procedure
 
-(Rebranded from "D3vil World News" on 2026-09-15 — same repo, same site
-URL, same automation, just new name/logo, matching D3vil Sports' own
-rebrand to StateForty8 Sports the same day. Logo mark is the same
-Arizona-outline saguaro icon used on the Sports site, with a red sun
-ring accent (`--stamp`). **Two colorways, both required — never use
-just one**: `stateforty8-mark-light.png` (near-black lines + `#b3261e`
-sun, for the default light theme) and `stateforty8-mark-dark.png`
-(cream lines + `#e0554a` sun, for the toggled dark theme) — an earlier
-version used a single monochrome asset plus a CSS `invert()` filter for
-dark mode, but that corrupts the red sun's color when inverted, so it
-was replaced with real dual assets swapped via CSS
-(`.mascot-light`/`.mascot-dark`, same pattern as the existing sun/moon
-toggle icons) — never go back to the filter approach. Masthead markup,
-stacked icon-over-wordmark:
+(Rebranded from "D3vil World News" to "StateForty8" on 2026-09-15, then
+again to "48th State" on 2026-09-16 — same repo, same site URL, same
+automation, same icon, matching 48th State Sports' own second rebrand
+the same day. **Asset filenames still say
+"stateforty8" on purpose** — they're icon-only with no baked-in text,
+so nothing about their pixel content changed in this second rebrand;
+don't rename them, it'd just churn every reference for no visible
+benefit. Logo mark is the same Arizona-outline saguaro icon used on the
+Sports site, with a red sun ring accent (`--stamp`). **Two colorways,
+both required — never use just one**: `stateforty8-mark-light.png`
+(near-black lines + `#b3261e` sun, for the default light theme) and
+`stateforty8-mark-dark.png` (cream lines + `#e0554a` sun, for the
+toggled dark theme) — an earlier version used a single monochrome
+asset plus a CSS `invert()` filter for dark mode, but that corrupts the
+red sun's color when inverted, so it was replaced with real dual assets
+swapped via CSS (`.mascot-light`/`.mascot-dark`, same pattern as the
+existing sun/moon toggle icons) — never go back to the filter approach.
+Masthead markup, stacked icon-over-wordmark:
 `<img class="mascot mascot-light" src="assets/stateforty8-mark-light.png">`
 + `<img class="mascot mascot-dark" src="assets/stateforty8-mark-dark.png">`
-+ `<div class="masthead">STATE<span class="accent-char">FORTY8</span></div>`
-+ `<div class="masthead-sub">WORLD NEWS</div>` — icon pair, then
-STATEFORTY8, then WORLD NEWS. Newsletter emails have a fixed
-(non-toggleable) white background, so `scripts/send-newsletter.js`
-always uses the light variant only. Favicon:
-`assets/stateforty8-favicon.png`.)
++ `<div class="masthead"><span class="accent-char">48TH</span> STATE</div>`
++ `<div class="masthead-sub">WORLD NEWS</div>` — icon pair, then 48TH
+STATE (48TH in accent color, STATE in the normal ink color — the accent
+always sits on the distinctive/number word, which is why it moved from
+FORTY8 to 48TH when the word order flipped), then WORLD NEWS.
+Newsletter emails have a fixed (non-toggleable) white background, so
+`scripts/send-newsletter.js` always uses the light variant only.
+Favicon: `assets/stateforty8-favicon.png`. Linktree (shared with
+Sports) is already on the new name at `linktr.ee/48thState` — this repo
+was the last piece to catch up.)
 
 This file is the complete, self-contained procedure for producing one
 day's edition, across **five regions**: Americas, Europe, Middle East,
-Africa, Asia. Verification matters far more here than on StateForty8 Sports: a
+Africa, Asia. Verification matters far more here than on 48th State Sports: a
 wrong score is embarrassing, a wrong casualty count or misattributed
 quote is a real credibility and liability problem. When in doubt, cut
 the story rather than run it thin — it's fine, even expected, for a
@@ -194,7 +202,7 @@ categories above; they're legitimate world news on their own terms):**
   geopolitical reach — a World Cup, the Olympics, a continental
   championship, a host country's preparations or controversies. This is
   **not** routine domestic league coverage (NFL, NBA, EPL, etc.) — that
-  stays StateForty8 Sports' beat, not this site's. It's specifically for
+  stays 48th State Sports' beat, not this site's. It's specifically for
   events that are themselves world news.
 
 **Still does not qualify — leave these out even if wire-sourced and
@@ -329,7 +337,7 @@ containing that region's `.story` divs:
 For a still-developing story, add a line inside the paragraph or as its
 own line: `<span class="unconfirmed">Not yet independently confirmed.</span>`
 
-- `<title>`: `Month D, YYYY — StateForty8 World News`.
+- `<title>`: `Month D, YYYY — 48th State World News`.
 - Meta description: one sentence on the edition's lead story.
 - `.post-header .date` / `<h1>`: human-readable date and an actual
   headline for the day's lead story (not "Daily Edition").
@@ -358,7 +366,7 @@ cp posts/<date>.html posts/latest.html
 
 ## 9. Enforce 7-day retention
 
-Same policy as StateForty8 Sports — keep only the 7 most recent dated posts.
+Same policy as 48th State Sports — keep only the 7 most recent dated posts.
 
 ```
 ls posts/*.html | grep -v 'posts/latest.html' | sort | head -n -7
@@ -378,7 +386,7 @@ git push
 
 Pushing to `main` triggers the GitHub Pages deployment
 (`.github/workflows/deploy.yml`), which also runs a `newsletter` job
-(added 2026-09-14, mirrors StateForty8 Sports' exactly) — it detects a newly
+(added 2026-09-14, mirrors 48th State Sports' exactly) — it detects a newly
 added post in the push and sends it via Kit. **Do not manually re-run
 the workflow or call the Kit API directly** — same anti-duplicate
 reasoning as Sports' job; test newsletter HTML locally with `node -e
@@ -389,18 +397,18 @@ which never touches the live API.
 (changed 2026-09-14, kamal's explicit choice).** The broadcast used to
 be scoped to the `world-news-subscriber` tag (id 23371637) only via
 `subscriber_filter` in `scripts/send-newsletter.js`, matching
-StateForty8 Sports' equivalent scoping to `sports-subscriber` (id 23371585).
+48th State Sports' equivalent scoping to `sports-subscriber` (id 23371585).
 That got dropped from both scripts the same day because World News
 still has no working auto-tag automation (see the gap below) and the
 tag filter was silently excluding real subscribers who never got
-tagged. Until auto-tagging is fixed, both StateForty8 Sports and D3vil World
+tagged. Until auto-tagging is fixed, both 48th State Sports and D3vil World
 News broadcasts go to every subscriber on the account, sports fans and
 world-news readers alike. If the two audiences are ever meant to
 diverge again, restore the `subscriber_filter` block (see git history
-around 2026-09-14 in this file, or StateForty8 Sports' equivalent script) in
+around 2026-09-14 in this file, or 48th State Sports' equivalent script) in
 both scripts together — not just one, or they'll disagree on scope.
 
-**Known gap: new subscribers aren't auto-tagged.** StateForty8 Sports has a
+**Known gap: new subscribers aren't auto-tagged.** 48th State Sports has a
 Kit Visual Automation that auto-tags new signups, but the account's
 plan caps Visual Automations at 1 (already used by Sports) and the
 older Rules feature is also plan-gated — so there's currently no
