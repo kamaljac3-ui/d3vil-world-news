@@ -142,18 +142,17 @@ header.site {
 :root[data-theme="dark"] .masthead-row .mascot { filter: grayscale(1) contrast(1.1) invert(0.88); }
 
 .masthead {
-  font-size: 46px;
+  font-size: clamp(30px, 9vw, 46px);
   font-weight: 900;
   letter-spacing: -0.01em;
   text-decoration: none;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .masthead .accent-char {
   font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
-  font-size: 0.62em;
-  vertical-align: 4px;
   color: var(--stamp);
 }
 
