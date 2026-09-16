@@ -1,8 +1,20 @@
-# D3vil World News — daily update procedure
+# StateForty8 World News — daily update procedure
+
+(Rebranded from "D3vil World News" on 2026-09-15 — same repo, same site
+URL, same automation, just new name/logo, matching D3vil Sports' own
+rebrand to StateForty8 Sports the same day. Logo mark is the same
+Arizona-outline saguaro icon used on the Sports site, rendered
+monochrome (`assets/stateforty8-mark.png`) so this site's existing
+dark-mode `invert()` filter still works on it. Masthead markup, stacked
+icon-over-wordmark: `<img class="mascot" src="assets/stateforty8-mark.png">`
++ `<div class="masthead">STATE<span class="accent-char">FORTY8</span></div>`
++ `<div class="masthead-sub">WORLD NEWS</div>` — three stacked lines
+(icon, then STATEFORTY8, then WORLD NEWS), not a single combined line.
+Favicon: `assets/stateforty8-favicon.png`.)
 
 This file is the complete, self-contained procedure for producing one
 day's edition, across **five regions**: Americas, Europe, Middle East,
-Africa, Asia. Verification matters far more here than on D3vil Sports: a
+Africa, Asia. Verification matters far more here than on StateForty8 Sports: a
 wrong score is embarrassing, a wrong casualty count or misattributed
 quote is a real credibility and liability problem. When in doubt, cut
 the story rather than run it thin — it's fine, even expected, for a
@@ -166,7 +178,7 @@ categories above; they're legitimate world news on their own terms):**
   geopolitical reach — a World Cup, the Olympics, a continental
   championship, a host country's preparations or controversies. This is
   **not** routine domestic league coverage (NFL, NBA, EPL, etc.) — that
-  stays D3vil Sports' beat, not this site's. It's specifically for
+  stays StateForty8 Sports' beat, not this site's. It's specifically for
   events that are themselves world news.
 
 **Still does not qualify — leave these out even if wire-sourced and
@@ -301,7 +313,7 @@ containing that region's `.story` divs:
 For a still-developing story, add a line inside the paragraph or as its
 own line: `<span class="unconfirmed">Not yet independently confirmed.</span>`
 
-- `<title>`: `Month D, YYYY — D3vil World News`.
+- `<title>`: `Month D, YYYY — StateForty8 World News`.
 - Meta description: one sentence on the edition's lead story.
 - `.post-header .date` / `<h1>`: human-readable date and an actual
   headline for the day's lead story (not "Daily Edition").
@@ -330,7 +342,7 @@ cp posts/<date>.html posts/latest.html
 
 ## 9. Enforce 7-day retention
 
-Same policy as D3vil Sports — keep only the 7 most recent dated posts.
+Same policy as StateForty8 Sports — keep only the 7 most recent dated posts.
 
 ```
 ls posts/*.html | grep -v 'posts/latest.html' | sort | head -n -7
@@ -350,7 +362,7 @@ git push
 
 Pushing to `main` triggers the GitHub Pages deployment
 (`.github/workflows/deploy.yml`), which also runs a `newsletter` job
-(added 2026-09-14, mirrors D3vil Sports' exactly) — it detects a newly
+(added 2026-09-14, mirrors StateForty8 Sports' exactly) — it detects a newly
 added post in the push and sends it via Kit. **Do not manually re-run
 the workflow or call the Kit API directly** — same anti-duplicate
 reasoning as Sports' job; test newsletter HTML locally with `node -e
@@ -361,18 +373,18 @@ which never touches the live API.
 (changed 2026-09-14, kamal's explicit choice).** The broadcast used to
 be scoped to the `world-news-subscriber` tag (id 23371637) only via
 `subscriber_filter` in `scripts/send-newsletter.js`, matching
-D3vil Sports' equivalent scoping to `sports-subscriber` (id 23371585).
+StateForty8 Sports' equivalent scoping to `sports-subscriber` (id 23371585).
 That got dropped from both scripts the same day because World News
 still has no working auto-tag automation (see the gap below) and the
 tag filter was silently excluding real subscribers who never got
-tagged. Until auto-tagging is fixed, both D3vil Sports and D3vil World
+tagged. Until auto-tagging is fixed, both StateForty8 Sports and D3vil World
 News broadcasts go to every subscriber on the account, sports fans and
 world-news readers alike. If the two audiences are ever meant to
 diverge again, restore the `subscriber_filter` block (see git history
-around 2026-09-14 in this file, or D3vil Sports' equivalent script) in
+around 2026-09-14 in this file, or StateForty8 Sports' equivalent script) in
 both scripts together — not just one, or they'll disagree on scope.
 
-**Known gap: new subscribers aren't auto-tagged.** D3vil Sports has a
+**Known gap: new subscribers aren't auto-tagged.** StateForty8 Sports has a
 Kit Visual Automation that auto-tags new signups, but the account's
 plan caps Visual Automations at 1 (already used by Sports) and the
 older Rules feature is also plan-gated — so there's currently no
