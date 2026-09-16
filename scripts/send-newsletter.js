@@ -107,7 +107,7 @@ function buildEmailHtml(postFile) {
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td align="center" style="padding-bottom:8px;">
-                  <img src="${SITE_URL}/assets/stateforty8-mark.png" width="80" alt="StateForty8 World News" style="display:inline-block; border:0;">
+                  <img src="${SITE_URL}/assets/stateforty8-mark-light.png" width="80" alt="StateForty8 World News" style="display:inline-block; border:0;">
                 </td>
               </tr>
               <tr>

@@ -136,10 +136,16 @@ header.site {
   height: 88px;
   width: auto;
   display: block;
-  filter: grayscale(1) contrast(1.1);
 }
 
-:root[data-theme="dark"] .masthead-row .mascot { filter: grayscale(1) contrast(1.1) invert(0.88); }
+/* Two colorways of the mark: near-black-on-white (default) and cream-on-dark
+   (toggled theme) -- swapped as real separate assets rather than a CSS
+   filter, since a filter/invert would also wreck the red sun accent, which
+   needs to stay --stamp-colored (not inverted to its complement) in both
+   themes. Swapped the same way the sun/moon toggle icons already are. */
+.masthead-row .mascot-dark { display: none; }
+:root[data-theme="dark"] .masthead-row .mascot-light { display: none; }
+:root[data-theme="dark"] .masthead-row .mascot-dark { display: block; }
 
 .masthead {
   font-size: clamp(30px, 9vw, 46px);
