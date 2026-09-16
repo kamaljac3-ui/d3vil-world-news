@@ -44,7 +44,8 @@ stop — today's edition is already done, do not duplicate it.
 - **Tier 1 — primary.** AP, Reuters, AFP, plus other countries' own
   national wire services — journalistically equivalent, just not
   English-first: **Kyodo News** (Japan), **Yonhap** (South Korea),
-  **PTI** (India), **Antara** (Indonesia), **dpa** (Germany), **ANSA**
+  **PTI** and **IANS** (India — two independent national wires, added
+  IANS 2026-09-16), **Antara** (Indonesia), **dpa** (Germany), **ANSA**
   (Italy), **EFE** (Spain — also the deepest wire coverage of Latin
   America), and **The Canadian Press** (Canada — AP's exclusive
   domestic distributor there). Added 2026-09-15 after the Java Sea
@@ -65,12 +66,16 @@ stop — today's edition is already done, do not duplicate it.
   **Nikkei Asia**, **MercoPress** and **Buenos Aires Times** (South
   America/South Atlantic, English-language), **Mexico News Daily**,
   **The Tico Times** (Costa Rica), **Prensa Libre** (Guatemala/Central
-  America), and **InSight Crime** (Latin American organized-crime and
+  America), **InSight Crime** (Latin American organized-crime and
   security reporting — note: independent, field-researched, but rated
   left-center leaning by media-bias trackers, so pair its claims with a
-  wire source rather than leaning on it alone). Usable to confirm a
-  Tier 1 story or add on-the-ground context. **Never** the sole basis
-  for a claim — a Tier 2-only story doesn't run yet either.
+  wire source rather than leaning on it alone), and, added 2026-09-16
+  for South Asia security/diplomatic stories: **The Tribune (India)**
+  and **Business Standard** (established mainstream Indian dailies
+  with their own reporting, useful for texture beyond the PTI/IANS
+  wire copy on an India/Pakistan story). Usable to confirm a Tier 1
+  story or add on-the-ground context. **Never** the sole basis for a
+  claim — a Tier 2-only story doesn't run yet either.
 - **Not credible regardless of "non-mainstream" framing: state-run
   outlets.** RT, Xinhua, CGTN, Press TV, Prensa Latina (Cuba), and
   similar state-controlled agencies are excluded the same way the
