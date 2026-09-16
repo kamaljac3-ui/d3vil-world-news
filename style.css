@@ -128,14 +128,15 @@ header.site {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding-bottom: 14px;
+  padding-bottom: 0px;
   text-align: center;
 }
 
 .masthead-row .mascot {
-  height: 88px;
+  height: 130px;
   width: auto;
   display: block;
+  margin-bottom: -10px;
 }
 
 /* Two colorways of the mark: near-black-on-white (default) and cream-on-dark
