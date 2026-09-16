@@ -133,8 +133,11 @@ header.site {
 }
 
 .masthead-row .mascot {
-  height: 130px;
-  width: auto;
+  /* Scales with the same clamp() ratio as .masthead's font-size, so the
+     icon's width tracks the wordmark's width at every viewport size
+     instead of a fixed height that falls out of proportion. */
+  width: clamp(290px, 86vw, 440px);
+  height: auto;
   display: block;
   margin-bottom: -10px;
 }
