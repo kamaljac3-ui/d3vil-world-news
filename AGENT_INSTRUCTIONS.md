@@ -274,6 +274,38 @@ check that sub-region's own national wire directly (Kyodo News for
 Japan, Yonhap for Korea, PTI for India, Antara for Indonesia — see
 step 2) rather than trusting one search's results as exhaustive.
 
+**Africa needs the same treatment, added 2026-09-17.** A generic
+"Africa news" search skews toward whichever single country or analysis
+piece dominates aggregator results that day, the same failure mode
+that hit Americas (2026-09-12) and Asia (2026-09-14, 2026-09-16) —
+Africa has 54 countries and this bit hardest of all three on
+2026-09-17, when the section ran empty despite a mass-poisoning story
+in Nigeria that clearly cleared the bar. Every edition, check at
+minimum: West Africa (Nigeria explicitly — it alone has more people
+than most other regions' entire country lists), the Sahel/Sudan
+conflict zone, East Africa/the Horn (Ethiopia, Somalia, Kenya), the
+DRC/Great Lakes conflict, and Southern Africa — not just whichever
+country a single broad search happens to surface.
+
+**When a targeted sub-region search still comes up empty, check that
+region's daily digest page before concluding nothing happened — one
+query, not a fishing expedition, so this doesn't blow the research
+budget.** These digests reliably surface the day's real headlines even
+when a generic search doesn't, because they're curated by people, not
+ranked by generic relevance:
+- **Africa**: search `allafrica.com "All of Africa Today" <month day,
+  year>` — this is a daily aggregated front page and consistently has
+  the day's top story within the first result.
+- **Americas**: search `riotimesonline.com "Latin American Pulse" OR
+  "Andean Region Briefing" <month day, year>` — same idea, a daily
+  regional digest rather than a generic topic search.
+- **Southeast Asia** (part of the Asia region): search `bernama.com
+  "Top News Headlines" <month day, year>` — BERNAMA (Malaysia's
+  national wire, Tier 1) runs a daily regional roundup.
+This proved out immediately when tried on 2026-09-17: all three empty
+regions (Americas, Africa, Asia) had real, wire-verifiable stories
+sitting one digest-page query away.
+
 For each region:
 
 1. Check AP, Reuters, and AFP's world/region news feeds directly — not
@@ -298,10 +330,18 @@ For each region:
    items to hit one. A heavy-news day might produce four qualifying
    stories in one region; a quiet day might produce zero across several
    regions. Both outcomes are correct.
-6. If nothing in a region clears both bars that day, the section still
-   appears (for the jump-nav anchor) with a single line: "Nothing met
-   this edition's bar for significance and verification today." Do not
-   lower either bar to fill space.
+6. **Before writing a region off as empty, run that region's daily
+   digest query (above) if you haven't already.** Three of the four
+   times a region has come up empty on this site (2026-09-12, -14,
+   -16, -17), a real qualifying story existed and was found within one
+   extra query once someone looked — treat "empty" as a signal to
+   double-check, not a conclusion to accept on the first pass. If the
+   digest query also turns up nothing that clears the bar, the section
+   still appears (for the jump-nav anchor) with a single line: "Nothing
+   met this edition's bar for significance and verification today." Do
+   not lower either bar to fill space, and don't run more than one
+   digest query per empty region — this is a targeted check, not a
+   budget-draining search spree.
 
 ## 5. Write it up — rules (non-negotiable)
 
