@@ -31,6 +31,21 @@ Favicon: `assets/stateforty8-favicon.png`. Linktree (shared with
 Sports) is already on the new name at `linktr.ee/48thState` — this repo
 was the last piece to catch up.)
 
+**A separate `commentary/` section exists alongside the daily edition,
+added 2026-09-19 — this file's procedure does not cover it and the
+daily automated routine must never touch it.** It holds occasional
+long-form opinion/analysis pieces (first one: "The Fall of the
+Empire"), published roughly every one to two weeks, manually, by kamal
+working directly with Claude — never by the scheduled cloud routine.
+These pieces deliberately carry a point of view and use a distinct
+"aged scroll" visual design, unlike the neutral wire-verified voice and
+broadsheet look everywhere else on the site. `commentary/index.html` is
+the archive listing; each piece is its own `commentary/<slug>.html`.
+The daily routine should never create, edit, count, or reference
+anything under `commentary/` — it is not one of the five regions, does
+not factor into retention, and has its own separate promotion (a
+`notice-box` link on the homepage, not a `posts/` entry).
+
 This file is the complete, self-contained procedure for producing one
 day's edition, across **five regions**: Americas, Europe, Middle East,
 Africa, Asia. Verification matters far more here than on 48th State Sports: a
