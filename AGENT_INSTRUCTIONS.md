@@ -76,7 +76,16 @@ stop — today's edition is already done, do not duplicate it.
   same structural profile as Kyodo/dpa), and **Agência Estado / Broadcast**
   (Brazil — added 2026-09-19; Grupo Estado's wire service, privately owned
   by the Mesquita family since 1970, not state-linked; added given Brazil's
-  outsized story volume on this site, e.g. the Moraes/Supreme Court saga).
+  outsized story volume on this site, e.g. the Moraes/Supreme Court saga),
+  **PA Media / Press Association** (UK — added 2026-09-19 after a UK
+  government stockpiling-advice story was missed entirely: it was only
+  carried by UK regional press republishing wire copy, and there was no
+  UK-specific Tier 1 wire on this list to have caught it directly; PA
+  Media is privately owned by ~26 national/regional publishers, not
+  state-linked, same profile as The Canadian Press), and **Baltic News
+  Service / BNS** (Estonia/Latvia/Lithuania — added 2026-09-19; private
+  since founding in 1990, owned by Estonia's Postimees Group, partners
+  directly with Reuters/AP/AFP).
   Added 2026-09-15 after the Java Sea
   ferry disaster got missed on an Asia pass despite the right search
   query — a national wire in the story's own region often surfaces
@@ -133,7 +142,15 @@ stop — today's edition is already done, do not duplicate it.
   case), **Agencia Venezolana de Noticias / AVN** (Venezuela — added
   2026-09-19; self-describes as the "informative organ of the Venezuelan
   State" under Maduro's Ministry of Communication — relevant given how
-  often Venezuela shows up on this site), and similar state-controlled
+  often Venezuela shows up on this site), **MTI** (Hungary — added
+  2026-09-19; nationalized into the state media conglomerate MTVA under
+  the Orbán government since 2015), **Ukrinform** (Ukraine — added
+  2026-09-19; Ukraine's state-owned news agency, and a direct party to the
+  war it reports on, so not treated as a neutral wire despite the
+  temptation given how much Ukraine coverage runs here — use Reuters/
+  AP/AFP/dpa for the war itself and treat any Ukrinform claim the way a
+  combatant government's own statements are treated, not as independent
+  confirmation), and similar state-controlled
   agencies are excluded the same way the
   Denylist excludes CNN/Fox — being outside the Western mainstream
   press doesn't make an outlet independent. A story only they're
