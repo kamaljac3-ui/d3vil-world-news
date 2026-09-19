@@ -71,9 +71,13 @@ stop — today's edition is already done, do not duplicate it.
   IANS 2026-09-16), **Antara** (Indonesia), **dpa** (Germany), **ANSA**
   (Italy), **EFE** (Spain — also the deepest wire coverage of Latin
   America), **The Canadian Press** (Canada — AP's exclusive domestic
-  distributor there), and **CNA** (Central News Agency, Taiwan — added
+  distributor there), **CNA** (Central News Agency, Taiwan — added
   2026-09-19; government-funded but no documented editorial interference,
-  same structural profile as Kyodo/dpa). Added 2026-09-15 after the Java Sea
+  same structural profile as Kyodo/dpa), and **Agência Estado / Broadcast**
+  (Brazil — added 2026-09-19; Grupo Estado's wire service, privately owned
+  by the Mesquita family since 1970, not state-linked; added given Brazil's
+  outsized story volume on this site, e.g. the Moraes/Supreme Court saga).
+  Added 2026-09-15 after the Java Sea
   ferry disaster got missed on an Asia pass despite the right search
   query — a national wire in the story's own region often surfaces
   something faster than a generic international search does. Every
@@ -126,7 +130,10 @@ stop — today's edition is already done, do not duplicate it.
   legitimate wire, but confirmed to have taken a R20m payment from South
   Africa's State Security Agency to run favorable coverage of then-
   President Zuma — a state-capture case, not a sourcing-quality edge
-  case), and similar state-controlled
+  case), **Agencia Venezolana de Noticias / AVN** (Venezuela — added
+  2026-09-19; self-describes as the "informative organ of the Venezuelan
+  State" under Maduro's Ministry of Communication — relevant given how
+  often Venezuela shows up on this site), and similar state-controlled
   agencies are excluded the same way the
   Denylist excludes CNN/Fox — being outside the Western mainstream
   press doesn't make an outlet independent. A story only they're
