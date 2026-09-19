@@ -70,8 +70,10 @@ stop — today's edition is already done, do not duplicate it.
   **PTI** and **IANS** (India — two independent national wires, added
   IANS 2026-09-16), **Antara** (Indonesia), **dpa** (Germany), **ANSA**
   (Italy), **EFE** (Spain — also the deepest wire coverage of Latin
-  America), and **The Canadian Press** (Canada — AP's exclusive
-  domestic distributor there). Added 2026-09-15 after the Java Sea
+  America), **The Canadian Press** (Canada — AP's exclusive domestic
+  distributor there), and **CNA** (Central News Agency, Taiwan — added
+  2026-09-19; government-funded but no documented editorial interference,
+  same structural profile as Kyodo/dpa). Added 2026-09-15 after the Java Sea
   ferry disaster got missed on an Asia pass despite the right search
   query — a national wire in the story's own region often surfaces
   something faster than a generic international search does. Every
@@ -96,12 +98,18 @@ stop — today's edition is already done, do not duplicate it.
   for South Asia security/diplomatic stories: **The Tribune (India)**
   and **Business Standard** (established mainstream Indian dailies
   with their own reporting, useful for texture beyond the PTI/IANS
-  wire copy on an India/Pakistan story). Usable to confirm a Tier 1
+  wire copy on an India/Pakistan story), and, added 2026-09-19:
+  **Taipei Times** (Taiwan/cross-strait texture beyond CNA wire copy).
+  Usable to confirm a Tier 1
   story or add on-the-ground context. **Never** the sole basis for a
   claim — a Tier 2-only story doesn't run yet either.
 - **Not credible regardless of "non-mainstream" framing: state-run
-  outlets.** RT, Xinhua, CGTN, Press TV, Prensa Latina (Cuba), and
-  similar state-controlled agencies are excluded the same way the
+  outlets.** RT, Xinhua, CGTN, Press TV, Prensa Latina (Cuba), **Anadolu
+  Agency** (Turkey — added 2026-09-19; under direct Presidential
+  Directorate control since a 2019 decree, with documented pro-government
+  editorial bias — same profile as the others here, not a legitimate wire
+  despite being widely cited internationally), and similar state-controlled
+  agencies are excluded the same way the
   Denylist excludes CNN/Fox — being outside the Western mainstream
   press doesn't make an outlet independent. A story only they're
   carrying doesn't run; treat their reporting the same as an
