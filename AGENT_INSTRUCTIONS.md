@@ -100,6 +100,18 @@ stop — today's edition is already done, do not duplicate it.
   with their own reporting, useful for texture beyond the PTI/IANS
   wire copy on an India/Pakistan story), and, added 2026-09-19:
   **Taipei Times** (Taiwan/cross-strait texture beyond CNA wire copy).
+  Also added 2026-09-19, for Africa specifically — most African national
+  news agencies are directly state-owned (Nigeria's NAN, Egypt's MENA,
+  Morocco's MAP, Algeria's APS, Ethiopia's ENA), so there's no Tier 1
+  wire-equivalent option there the way there is in Asia/Europe/Latin
+  America; these are independent, privately-run outlets instead, still
+  requiring a Tier 1 wire underneath any claim: **Premium Times** (Nigeria
+  — investigative, grant/ad-funded, rated left-center leaning, pair with a
+  wire source rather than leaning on it alone, same caveat as InSight
+  Crime), **Daily Maverick** and **The Continent** (South Africa /
+  pan-African weekly, private investigative), and **Nation Media Group /
+  The East African** (Kenya — largest private media house in East Africa,
+  for Horn/East Africa texture).
   Usable to confirm a Tier 1
   story or add on-the-ground context. **Never** the sole basis for a
   claim — a Tier 2-only story doesn't run yet either.
@@ -108,7 +120,13 @@ stop — today's edition is already done, do not duplicate it.
   Agency** (Turkey — added 2026-09-19; under direct Presidential
   Directorate control since a 2019 decree, with documented pro-government
   editorial bias — same profile as the others here, not a legitimate wire
-  despite being widely cited internationally), and similar state-controlled
+  despite being widely cited internationally), **African News Agency /
+  ANA** (South Africa — added 2026-09-19; explicitly excluded, not just
+  unmentioned: launched in 2015 as SAPA's replacement and looks like a
+  legitimate wire, but confirmed to have taken a R20m payment from South
+  Africa's State Security Agency to run favorable coverage of then-
+  President Zuma — a state-capture case, not a sourcing-quality edge
+  case), and similar state-controlled
   agencies are excluded the same way the
   Denylist excludes CNN/Fox — being outside the Western mainstream
   press doesn't make an outlet independent. A story only they're
