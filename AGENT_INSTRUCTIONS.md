@@ -466,6 +466,23 @@ For each region:
 
 ## 6. Build today's post page
 
+**Every page on this site must keep the Google Analytics snippet in
+`<head>`, added 2026-09-19** (Measurement ID `G-7NP09GHE4M`, property
+"48th State World News" under the "48th State" GA account):
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NP09GHE4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7NP09GHE4M');
+</script>
+```
+If the file used as this day's structural template already has it (it
+should, since it's copied from yesterday's post), it carries over
+automatically — just don't strip it out. If it's ever missing from
+whatever file gets copied, add it back before publishing.
+
 Copy an existing `posts/<date>.html` as a structural template once one
 exists (until then, build from `index.html`'s head/theme-toggle
 boilerplate). Keep: the same `<head>` font links, the theme-toggle
