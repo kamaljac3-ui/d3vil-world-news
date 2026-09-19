@@ -85,7 +85,12 @@ stop — today's edition is already done, do not duplicate it.
   state-linked, same profile as The Canadian Press), and **Baltic News
   Service / BNS** (Estonia/Latvia/Lithuania — added 2026-09-19; private
   since founding in 1990, owned by Estonia's Postimees Group, partners
-  directly with Reuters/AP/AFP).
+  directly with Reuters/AP/AFP), and **UNB** (United News of Bangladesh —
+  added 2026-09-19; private since founding in 1988, AP-anchored, South
+  Asia's first fully digitalized private wire service). Note: Pakistan's
+  APP (Associated Press of Pakistan) was checked and deliberately NOT
+  added here — it's state-owned under the Ministry of Information and
+  Broadcasting, ~70% government-subsidized, see the denylist entry below.
   Added 2026-09-15 after the Java Sea
   ferry disaster got missed on an Asia pass despite the right search
   query — a national wire in the story's own region often surfaces
@@ -112,7 +117,12 @@ stop — today's edition is already done, do not duplicate it.
   and **Business Standard** (established mainstream Indian dailies
   with their own reporting, useful for texture beyond the PTI/IANS
   wire copy on an India/Pakistan story), and, added 2026-09-19:
-  **Taipei Times** (Taiwan/cross-strait texture beyond CNA wire copy).
+  **Taipei Times** (Taiwan/cross-strait texture beyond CNA wire copy) and
+  **Dawn** (Pakistan — privately owned by the Haroon family since 1941,
+  Pakistan's most respected English-language paper, but operates under
+  real government/military pressure on ad revenue and access when
+  critical, so pair its claims with a wire source rather than leaning on
+  it alone, same caveat as InSight Crime/Premium Times).
   Also added 2026-09-19, for Africa specifically — most African national
   news agencies are directly state-owned (Nigeria's NAN, Egypt's MENA,
   Morocco's MAP, Algeria's APS, Ethiopia's ENA), so there's no Tier 1
@@ -150,7 +160,11 @@ stop — today's edition is already done, do not duplicate it.
   temptation given how much Ukraine coverage runs here — use Reuters/
   AP/AFP/dpa for the war itself and treat any Ukrinform claim the way a
   combatant government's own statements are treated, not as independent
-  confirmation), and similar state-controlled
+  confirmation), **APP** (Associated Press of Pakistan — added 2026-09-19;
+  despite the name, state-owned under the Ministry of Information and
+  Broadcasting, government-appointed management, ~70% government-
+  subsidized — use PTI/IANS/AP/Reuters for Pakistan coverage instead, with
+  Dawn as Tier 2 texture), and similar state-controlled
   agencies are excluded the same way the
   Denylist excludes CNN/Fox — being outside the Western mainstream
   press doesn't make an outlet independent. A story only they're
