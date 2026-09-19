@@ -273,6 +273,15 @@ search comes back with nothing but routine business/politics, also
 check that sub-region's own national wire directly (Kyodo News for
 Japan, Yonhap for Korea, PTI for India, Antara for Indonesia — see
 step 2) rather than trusting one search's results as exhaustive.
+**Explicit flag, added 2026-09-19 after kamal noticed the pattern:
+this site kept defaulting back to Nepal's floods edition after
+edition because it was already-sourced and easy, not because it was
+the only real story in a region of ~4.7 billion people.** An ongoing
+story with a real new development can still run, but it must not be
+the region's only story two editions running — actively check China,
+Japan, the Koreas, India, and Southeast Asia sub-regions fresh each
+day rather than reaching for the story that's already half-written
+from yesterday.
 
 **Africa needs the same treatment, added 2026-09-17.** A generic
 "Africa news" search skews toward whichever single country or analysis
@@ -324,24 +333,45 @@ For each region:
    story can still be a year stale. If you can reach the actual article,
    check its dateline. Don't infer recency from a headline or snippet
    alone.
-5. Include every story from that region that clears **both** the
-   significance bar (step 3) and the two-source verification bar
-   (step 2) — don't cap at a fixed count, and don't pad with marginal
-   items to hit one. A heavy-news day might produce four qualifying
-   stories in one region; a quiet day might produce zero across several
-   regions. Both outcomes are correct.
-6. **Before writing a region off as empty, run that region's daily
-   digest query (above) if you haven't already.** Three of the four
-   times a region has come up empty on this site (2026-09-12, -14,
-   -16, -17), a real qualifying story existed and was found within one
-   extra query once someone looked — treat "empty" as a signal to
-   double-check, not a conclusion to accept on the first pass. If the
-   digest query also turns up nothing that clears the bar, the section
-   still appears (for the jump-nav anchor) with a single line: "Nothing
-   met this edition's bar for significance and verification today." Do
-   not lower either bar to fill space, and don't run more than one
-   digest query per empty region — this is a targeted check, not a
-   budget-draining search spree.
+5. **Target two stories per region, added 2026-09-19 at kamal's
+   explicit request.** Not a hard floor you pad to hit — every story
+   still has to clear both the significance bar (step 3) and the
+   two-source verification bar (step 2) — but a region landing at one
+   story (or zero) should be the result of genuinely exhausting the
+   region's sub-areas, not of stopping the moment the first story was
+   found. Include every qualifying story, capped at four per region so
+   one heavy-news region doesn't dominate the edition; a quiet day can
+   still land under two in a region, but only after real effort (see
+   6 below), not by default.
+6. **Don't let a single easy, ongoing story become the region's whole
+   personality.** Asia in particular has repeatedly defaulted to
+   whichever disaster was already running (Nepal's floods ran in
+   multiple consecutive editions) because it's the path of least
+   resistance — an already-verified, always-available story — while
+   ~4.7 billion other people across China, Japan, the two Koreas,
+   India, Southeast Asia, and the Pacific went unchecked that day. The
+   same risk applies to Americas (an easy Brazil/Mexico headline
+   standing in for all of Central and South America) and Africa (one
+   country's story standing in for all 54). **Before settling on a
+   second story from the same country/story-thread that already ran
+   yesterday, check at least one other sub-region you haven't looked at
+   yet.** An ongoing story with a genuine new development is fine to
+   include, but region coverage should reflect the region's actual
+   size — rotate sub-regions in, don't let one crisis carry the section
+   day after day just because it's already sourced.
+7. **Before writing a region off as empty or stuck at one story, run
+   that region's daily digest query (above) if you haven't already.**
+   Three of the four times a region has come up empty on this site
+   (2026-09-12, -14, -16, -17), a real qualifying story existed and was
+   found within one extra query once someone looked — treat "empty" or
+   "only one story" as a signal to double-check, not a conclusion to
+   accept on the first pass. If the digest query also turns up nothing
+   further that clears the bar, the section appears with whatever
+   qualifying stories were actually found (down to a single line if
+   truly none did: "Nothing met this edition's bar for significance and
+   verification today"). Do not lower either bar to fill space, and
+   don't run more than one digest query per region — this is a targeted
+   check, not a budget-draining search spree.
 
 ## 5. Write it up — rules (non-negotiable)
 
