@@ -91,7 +91,7 @@ function buildEmailHtml(commentaryFile) {
         <tr>
           <td style="border-top:1px solid #c9b489; padding:22px 36px 30px;">
             <div style="text-align:center; font-family:Georgia,'Times New Roman',serif; font-size:13px; font-style:italic; color:#6d5a41; line-height:1.6;">
-              This is the first in an ongoing commentary series from 48th State &mdash; new installments roughly every one to two weeks.
+              This is part of an ongoing commentary series from 48th State &mdash; new installments roughly every one to two weeks.
             </div>
           </td>
         </tr>

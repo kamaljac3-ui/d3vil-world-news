@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Forgotten Genocide &mdash; 48th State World News</title>
+<meta name="description" content="Darfur was named a genocide in 2004. In 2026, UN investigators are using the word again for the same region, and the world has done little about it.">
+<link rel="icon" type="image/png" href="../assets/stateforty8-favicon.png">
+<style>
+  :root{
+    --parchment:#e9ddc3;
+    --parchment-2:#e0d1ae;
+    --parchment-edge:#c9b489;
+    --ink:#3c2d1c;
+    --ink-soft:#6d5a41;
+    --red:#7c2c26;
+    --gold:#916a2f;
+    --wood:#3a2718;
+    --wood-hi:#6b4a2c;
+    --wood-lo:#241609;
+    --backdrop:#151009;
+    --backdrop-2:#0c0906;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 120% 80% at 50% 0%, var(--backdrop-2) 0%, var(--backdrop) 60%);
+    background-color:var(--backdrop);
+    color:var(--ink);
+    font-family:"Source Serif 4","Iowan Old Style","Palatino Linotype",Georgia,serif;
+    padding-block:56px;
+  }
+  .stage{
+    max-width:840px;
+    margin:0 auto;
+    padding-inline:16px;
+  }
+  .back-link{
+    display:block;
+    text-align:center;
+    color:#c9b489;
+    font-size:13px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    text-decoration:none;
+    margin-bottom:22px;
+    opacity:.85;
+  }
+  .back-link:hover{ opacity:1; text-decoration:underline; }
+
+  /* ---- scroll rods ---- */
+  .rod{
+    height:34px;
+    margin-inline:auto;
+    max-width:800px;
+    border-radius:17px;
+    position:relative;
+    background:
+      linear-gradient(180deg, var(--wood-hi) 0%, var(--wood) 45%, var(--wood-lo) 100%);
+    box-shadow:
+      0 3px 0 rgba(0,0,0,.35),
+      0 10px 22px rgba(0,0,0,.55);
+  }
+  .rod::before, .rod::after{
+    content:"";
+    position:absolute;
+    top:-6px; bottom:-6px;
+    width:22px;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 35% 30%, var(--wood-hi) 0%, var(--wood) 55%, var(--wood-lo) 100%);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .rod::before{ left:-11px; }
+  .rod::after{ right:-11px; }
+  .rod-top{ margin-bottom:-6px; }
+  .rod-bottom{ margin-top:-6px; }
+
+  /* ---- parchment body ---- */
+  .parchment{
+    position:relative;
+    background:
+      radial-gradient(ellipse at 15% 8%, rgba(255,255,255,.10), transparent 40%),
+      radial-gradient(ellipse at 85% 92%, rgba(0,0,0,.08), transparent 45%),
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0 2px, transparent 2px 5px),
+      linear-gradient(180deg, var(--parchment) 0%, var(--parchment-2) 100%);
+    padding: 30px clamp(20px, 6vw, 76px) 46px;
+    box-shadow:
+      inset 0 0 60px rgba(80,55,20,.28),
+      inset 0 0 3px rgba(0,0,0,.35),
+      0 0 0 1px rgba(0,0,0,.15);
+  }
+  .parchment::before{
+    content:"";
+    position:absolute; inset:0;
+    pointer-events:none;
+    background:
+      linear-gradient(90deg, var(--parchment-edge) 0%, transparent 3%, transparent 97%, var(--parchment-edge) 100%);
+    opacity:.55;
+    mix-blend-mode:multiply;
+  }
+  .grain{
+    position:absolute; inset:0;
+    pointer-events:none;
+    opacity:.5;
+    mix-blend-mode:multiply;
+  }
+  .crease{
+    position:absolute; top:0; bottom:0; left:50%;
+    width:1px;
+    background:linear-gradient(180deg, transparent, rgba(80,55,20,.22) 15%, rgba(80,55,20,.22) 85%, transparent);
+    pointer-events:none;
+  }
+
+  .content{ position:relative; }
+
+  header{ text-align:center; padding-top:8px; }
+  .kicker{
+    font-size:12.5px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--red);
+    font-weight:600;
+  }
+  h1{
+    font-size:clamp(30px, 5.6vw, 52px);
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin: 10px 0 6px;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  .seal{
+    width:64px; height:64px;
+    margin: 14px auto 10px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #9c433a, var(--red) 55%, #501712 100%);
+    box-shadow: 0 3px 8px rgba(0,0,0,.4), inset 0 0 0 2px rgba(255,235,205,.25);
+    display:flex; align-items:center; justify-content:center;
+    color:#f1dcb8;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.02em;
+  }
+  .subtitle{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:16px;
+    max-width:46ch;
+    margin:0 auto 4px;
+  }
+  .rule{
+    width:220px;
+    height:2px;
+    margin:22px auto 30px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    position:relative;
+  }
+  .rule::before{
+    content:"❧";
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-52%);
+    background:var(--parchment);
+    padding:0 10px;
+    color:var(--gold);
+    font-size:15px;
+  }
+
+  .part{ margin-top:44px; }
+  .part-label{
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:18px;
+  }
+  .part-num{
+    font-size:26px;
+    color:var(--red);
+    font-weight:700;
+    letter-spacing:.04em;
+  }
+  .part-name{
+    font-size:13px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .part-line{ flex:1; height:1px; background:linear-gradient(90deg, var(--parchment-edge), transparent); }
+
+  p{
+    font-size:17.5px;
+    line-height:1.72;
+    margin:0 0 20px;
+    color:var(--ink);
+    max-width:66ch;
+  }
+  .part > p:first-of-type::first-letter{
+    float:left;
+    font-size:64px;
+    line-height:.82;
+    padding:6px 8px 0 0;
+    font-weight:700;
+    color:var(--red);
+  }
+
+  .series-note{
+    text-align:center;
+    margin-top:50px;
+    padding-top:26px;
+    border-top:1px solid var(--parchment-edge);
+  }
+  .series-note .mark{
+    font-size:15px;
+    color:var(--gold);
+    letter-spacing:.3em;
+    margin-bottom:10px;
+  }
+  .series-note p{
+    max-width:46ch;
+    margin:0 auto;
+    color:var(--ink);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .series-note .cadence{
+    color:var(--red);
+    font-weight:600;
+    font-style:normal;
+  }
+
+  .sources{
+    margin-top:34px;
+    padding-top:20px;
+    border-top:1px solid var(--parchment-edge);
+  }
+  .sources-title{
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .sources ul{ margin:0; padding-left:18px; }
+  .sources li{
+    font-size:13.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    margin-bottom:5px;
+  }
+  .sources a{ color:var(--red); text-decoration:none; border-bottom:1px solid var(--parchment-edge); }
+  .sources a:hover{ border-bottom-color:var(--red); }
+
+  footer{
+    text-align:center;
+    margin-top:22px;
+    padding-top:0;
+    border-top:none;
+    color:var(--ink-soft);
+    font-style:italic;
+    font-size:14px;
+    letter-spacing:.02em;
+  }
+
+  @media (max-width:520px){
+    p{ font-size:16.5px; }
+    .part > p:first-of-type::first-letter{ font-size:52px; }
+  }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NP09GHE4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7NP09GHE4M');
+</script>
+</head>
+<body>
+<div class="stage">
+  <a class="back-link" href="./">&larr; Back to Commentary</a>
+  <div class="rod rod-top"></div>
+  <div class="parchment">
+    <svg class="grain" width="0" height="0">
+      <filter id="noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0 0.08  0 0 0 0.05 0"/>
+      </filter>
+    </svg>
+    <div class="grain" style="filter:url(#noise);"></div>
+    <div class="crease"></div>
+
+    <div class="content">
+
+      <header>
+        <div class="kicker">A Commentary &middot; 48th State World News</div>
+        <h1>The Forgotten Genocide</h1>
+        <div class="seal">SDN</div>
+        <p class="subtitle">In 2004 the world called what happened in Darfur genocide. In 2026 UN investigators are using the word again, for the same region, and not much else has changed.</p>
+        <div class="rule"></div>
+      </header>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">I</span>
+          <span class="part-name">The First Time</span>
+          <span class="part-line"></span>
+        </div>
+        <p>Sudan has been here before. In 2003, rebels in Darfur took up arms against Khartoum, and the government of Omar al-Bashir answered by arming Arab militias known as the Janjaweed, who attacked Fur, Masalit, and Zaghawa civilians, burning villages and driving millions from their homes. As many as 300,000 people were killed and 2.7 million displaced. On September 9, 2004, Secretary of State Colin Powell told the Senate Foreign Relations Committee that genocide had been committed in Darfur &mdash; and added that the finding dictated no new action. The International Criminal Court charged Bashir with genocide in 2010, the first time it had ever brought that charge against anyone. The first conviction the court has secured over Darfur came in October 2025, when Janjaweed commander Ali Kushayb was found guilty on 27 counts; he was sentenced to 20 years that December, more than two decades after the crimes he was convicted of.</p>
+        <p>The men now accused of repeating it grew out of the same machinery. The Rapid Support Forces, led by Mohamed Hamdan Dagalo, known as Hemedti, descend from the Janjaweed. In April 2023, the RSF and Sudan&rsquo;s army under General Abdel Fattah al-Burhan &mdash; two commanders who had shared power after the 2021 coup &mdash; turned their guns on each other, and the war has not stopped since.</p>
+      </section>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">II</span>
+          <span class="part-name">El Fasher</span>
+          <span class="part-line"></span>
+        </div>
+        <p>El Fasher was the army&rsquo;s last stronghold in Darfur. The RSF besieged it from May 2024 to October 2025, and the UN&rsquo;s Independent Fact-Finding Mission for Sudan concluded that the eighteen-month siege deliberately imposed conditions of life &mdash; cutting off food, water, medical care, and aid &mdash; that weakened the targeted population through starvation. On October 26, 2025, the RSF took the city. The UN says at least 6,000 people were killed over three days. Amnesty International, which interviewed 246 people for its report, recorded a witness who saw nearly 1,000 bodies after the assault, and concluded the RSF committed crimes against humanity and ethnic cleansing, with the Zaghawa among those targeted.</p>
+        <p>In February 2026 the UN mission said what happened there carried the hallmarks of genocide, naming the Zaghawa and the Fur as the groups targeted. Its chair, Mohamed Chande Othman, said the scale, coordination, and public endorsement by senior RSF leadership showed the crimes &ldquo;were not random excesses of war.&rdquo; In July it dropped the hedge: the mission concluded the RSF had committed genocide in El Fasher, calling genocidal intent &ldquo;the only reasonable inference&rdquo; from a pattern of ethnically targeted killings, sexual violence, destruction, and public calls to eliminate non-Arab communities. The RSF denies it, saying the accounts are manufactured by its enemies.</p>
+        <p>The word was not new even then. The United States formally determined in January 2025 &mdash; nearly ten months before El Fasher fell &mdash; that the RSF had committed genocide in Darfur, and sanctioned Hemedti personally. The label arrived. The city fell anyway.</p>
+      </section>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">III</span>
+          <span class="part-name">A Word With Nothing Behind It</span>
+          <span class="part-line"></span>
+        </div>
+        <p>The scale is hard to hold in your head. More than 11 million Sudanese have been displaced, according to UN figures reported in September, over 3.5 million of them across borders &mdash; the largest displacement crisis in the world. Chad alone hosts more than 900,000 Sudanese refugees, and the UN refugee agency says arrivals have jumped to about 400 a day, roughly twenty times the pace of previous months, while the UN&rsquo;s $1.6 billion appeal for the response is only 20 percent funded. The wider humanitarian appeal for 2026, $2.8 billion, was 17 percent funded as of April. More than 19 million people face acute hunger, famine has been confirmed in two areas, and twenty more are at risk. As for the dead, nobody knows. Estimates run from tens of thousands to hundreds of thousands, because almost no one can get in to count.</p>
+        <p>It would be easy to tell this as a story with one villain. It isn&rsquo;t one. Human Rights Watch documented army airstrikes that struck residential neighborhoods in Nyala, and the UN rights office raised alarm over summary executions by fighters allied with the army. But the genocide findings concern the RSF, and the RSF did not get this far on its own.</p>
+        <p>The supply line runs through Abu Dhabi. A UN Panel of Experts report in January 2024 called allegations that the United Arab Emirates was flying weapons to the RSF through an airstrip at Amdjarass, in eastern Chad, &ldquo;credible,&rdquo; and named the UAE as a key country in the RSF&rsquo;s financial networks; the arms it described included drones, howitzers, rocket launchers, and anti-aircraft missiles, which it said shifted the balance of forces on the ground. In May 2025, Amnesty International traced Chinese-made guided bombs and howitzers used by the RSF to weapons it said the UAE had almost certainly re-exported, in breach of the UN arms embargo on Darfur. That January, the US Treasury sanctioned RSF-linked companies in the UAE, including a holding company it said supplied the force with money and military equipment and a gold buyer that moved Sudanese gold to Dubai. This July, UN experts found that Boeing 727s flying the N&rsquo;Djamena&ndash;Nyala route had carried RSF fighters, foreign mercenaries, drones, and weapons, and Reuters traced the aircraft. An advocacy report supported in part by Refugees International went further, arguing the siege and takeover of El Fasher &ldquo;would likely not have occurred&rdquo; without that outside help.</p>
+        <p>The UAE denies it. It says its flights carried humanitarian supplies, rejects the mercenary allegations, and pledged $500 million in aid for Sudan in February. When Sudan took the claim to the International Court of Justice in May 2025, the court threw the case out without weighing the evidence, ruling it lacked jurisdiction because the UAE had excluded that route when it joined the Genocide Convention. So no court has judged the UAE&rsquo;s role. Meanwhile it sits among the mediators trying to broker a truce, and in March the army chief said there would be no ceasefire or reconciliation before the RSF surrenders and objected to the UAE&rsquo;s seat at the table. The arithmetic, though, is not complicated: whoever arms and finances the RSF is arming and financing the force that UN investigators say committed genocide.</p>
+        <p>Meanwhile the war has moved east. In El Obeid, the capital of North Kordofan, the UN warned in August of relentless drone strikes and the risk of mass atrocities. On September 25, a drone hit a displacement shelter, killing two and wounding twenty. On October 1, one hit a University of Kordofan student dormitory, killing five and wounding 47, according to the Sudanese Doctors Network. None of this is hidden. A genocide was declared in Darfur in 2004, again by the United States in 2025, and UN investigators have used the word twice this year. What the word has never been, in Sudan, is a trigger. Powell told the Senate in 2004 that his finding required no new action, and twenty-two years later that has been the most reliable part of the policy. &ldquo;Forgotten&rdquo; may be the wrong word. The world remembers fine. It just hasn&rsquo;t done anything.</p>
+      </section>
+
+      <div class="series-note">
+        <div class="mark">&#10087;</div>
+        <p>This is the second scroll in an ongoing commentary series from 48th State &mdash; new installments <span class="cadence">roughly every one to two weeks</span>, each one unrolling a story the daily wire can&rsquo;t slow down enough to tell.</p>
+      </div>
+
+      <div class="sources">
+        <div class="sources-title">Sources</div>
+        <ul>
+          <li><a href="https://www.jurist.org/news/2004/09/crisis-in-darfur-secretary-of-state/">Powell&rsquo;s 2004 genocide determination on Darfur</a> (Jurist)</li>
+          <li><a href="https://www.aljazeera.com/news/2020/2/11/who-are-those-wanted-by-the-icc-over-darfur">Darfur death toll and ICC warrants for Bashir</a> (Al Jazeera)</li>
+          <li><a href="https://allafrica.com/stories/202512100005.html">ICC sentences Ali Kushayb to 20 years</a> (AllAfrica, Dec. 2025)</li>
+          <li><a href="https://www.cbc.ca/lite/story/1.7424781">US determines RSF committed genocide, sanctions Hemedti</a> (CBC, Jan. 2025)</li>
+          <li><a href="https://news.un.org/en/story/2026/02/1166997">&ldquo;Hallmarks of genocide&rdquo; found in El Fasher</a> (UN News, Feb. 2026)</li>
+          <li><a href="https://www.npr.org/2026/02/15/nx-s1-5715154/6000-killed-during-rsf-attack-sudan-el-fasher-un">UN: at least 6,000 killed in three days</a> (NPR, Feb. 2026)</li>
+          <li><a href="https://www.aljazeera.com/news/2026/7/1/amnesty-says-rsf-committed-ethnic-cleansing-in-sudans-el-fasher">Amnesty: RSF committed ethnic cleansing in El Fasher</a> (Al Jazeera, July 2026)</li>
+          <li><a href="https://www.aljazeera.com/news/2026/7/9/un-probe-finds-mass-killings-gang-rapes-by-sudans-rsf-amount-to-genocide">UN probe finds RSF acts amount to genocide</a> (Al Jazeera, July 2026)</li>
+          <li><a href="https://www.cfr.org/articles/what-extent-sudans-humanitarian-crisis">Sudan&rsquo;s humanitarian crisis, explained</a> (Council on Foreign Relations, Apr. 2026)</li>
+          <li><a href="https://www.aljazeera.com/news/2026/9/25/more-than-55000-sudanese-refugees-flee-to-chad-as-un-calls-for-funding">Sudanese refugees flee to Chad as UN calls for funding</a> (Al Jazeera, Sept. 2026)</li>
+          <li><a href="https://www.aljazeera.com/amp/news/2025/2/25/sudan-army-allies-intentionally-targeting-civilians-hrw">Army and allies targeting civilians</a> (Human Rights Watch via Al Jazeera, Feb. 2025)</li>
+          <li><a href="https://www.theglobeandmail.com/world/article-uae-sudan-weapons-report/">UN panel report on UAE weapons flights to the RSF</a> (The Globe and Mail, Jan. 2024)</li>
+          <li><a href="https://www.amnestyusa.org/press-releases/sudan-advanced-chinese-weaponry-provided-by-uae-identified-in-breach-of-arms-embargo-new-investigation/">Chinese weaponry provided by UAE found in breach of arms embargo</a> (Amnesty International, May 2025)</li>
+          <li><a href="https://allafrica.com/stories/202501070451.html">Treasury sanctions RSF leader, weapons supplier, and related companies</a> (AllAfrica, Jan. 2025)</li>
+          <li><a href="https://www.al-monitor.com/originals/2026/07/exclusive-boeings-identified-reuters-report-carried-weapons-sudanese-paramilitary">Boeing 727s carried weapons for the RSF, UN experts find</a> (Al-Monitor, July 2026)</li>
+          <li><a href="https://www.refugeesinternational.org/statements-and-news/refugees-international-calls-for-action-new-evidence-of-united-arab-emirates-fueling-genocide-in-sudan/">New evidence of UAE support to the RSF</a> (Refugees International, Feb. 2026)</li>
+          <li><a href="https://www.citinewsroom.com/2025/05/icj-dismisses-sudans-genocide-case-against-uae-over-alleged-darfur-interference/">ICJ dismisses Sudan&rsquo;s case against the UAE</a> (May 2025)</li>
+          <li><a href="https://www.thenationalnews.com/news/mena/2026/03/17/no-ceasefire-or-reconciliation-in-sudan-until-rsf-surrenders-army-chief-says/">Army chief: no ceasefire until RSF surrenders</a> (The National, Mar. 2026)</li>
+          <li><a href="https://www.npr.org/2026/08/07/nx-s1-5921212/el-obeid-sudan-war">El Obeid under drone strikes, UN warns of mass atrocities</a> (NPR, Aug. 2026)</li>
+          <li><a href="https://sudantribune.com/article/319268">Drone strike on displacement shelter in El Obeid</a> (Sudan Tribune, Sept. 2026)</li>
+          <li><a href="https://middleeastmonitor.com/20261001-5-killed-47-injured-in-rsf-drone-attack-on-university-dormitory-in-sudan-doctors-group">Drone attack on University of Kordofan dormitory</a> (Middle East Monitor, Oct. 2026)</li>
+        </ul>
+      </div>
+
+      <footer>Written &amp; researched October 2026 &middot; 48th State World News</footer>
+    </div>
+  </div>
+  <div class="rod rod-bottom"></div>
+</div>
+</body>
+</html>
