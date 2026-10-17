@@ -85,6 +85,22 @@ jobs:
             echo "file=$CHANGED" >> "$GITHUB_OUTPUT"
           fi
 
+      # Quality gate (added 2026-10-16 after the thin Oct 3 edition emailed out, then a second corrected
+      # email followed): if 2+ of the 5 regions shipped on the "Nothing met this edition's bar" placeholder,
+      # HOLD the send and fail this job (red X = visible in the daily check). The site still deploys.
+      # Once the regions are filled and today's post is pushed again, this job re-runs on that push and
+      # sends the good edition, so subscribers get ONE email, the right one. One quiet region still sends.
+      - name: Quality gate (hold thin editions)
+        id: gate
+        if: steps.detect.outputs.found == 'true'
+        run: |
+          EMPTY=$(grep -o "Nothing met this edition" "${{ steps.detect.outputs.file }}" | wc -l)
+          echo "Empty regions: $EMPTY"
+          if [ "$EMPTY" -ge 2 ]; then
+            echo "::error::$EMPTY regions are empty placeholders. Newsletter HELD. Fill the regions and push today's post again to send."
+            exit 1
+          fi
+
       - name: Send newsletter
         if: steps.detect.outputs.found == 'true'
         env:
