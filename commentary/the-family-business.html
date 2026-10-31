@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Family Business &mdash; 48th State World News</title>
+<meta name="description" content="Flávio Bolsonaro lost Brazil’s runoff and left for Miami with a court order behind him. His father and brother are in the same kind of trouble.">
+<link rel="icon" type="image/png" href="../assets/stateforty8-favicon.png">
+<style>
+  :root{
+    --parchment:#e9ddc3;
+    --parchment-2:#e0d1ae;
+    --parchment-edge:#c9b489;
+    --ink:#3c2d1c;
+    --ink-soft:#6d5a41;
+    --red:#7c2c26;
+    --gold:#916a2f;
+    --wood:#3a2718;
+    --wood-hi:#6b4a2c;
+    --wood-lo:#241609;
+    --backdrop:#151009;
+    --backdrop-2:#0c0906;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 120% 80% at 50% 0%, var(--backdrop-2) 0%, var(--backdrop) 60%);
+    background-color:var(--backdrop);
+    color:var(--ink);
+    font-family:"Source Serif 4","Iowan Old Style","Palatino Linotype",Georgia,serif;
+    padding-block:56px;
+  }
+  .stage{
+    max-width:840px;
+    margin:0 auto;
+    padding-inline:16px;
+  }
+  .back-link{
+    display:block;
+    text-align:center;
+    color:#c9b489;
+    font-size:13px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    text-decoration:none;
+    margin-bottom:22px;
+    opacity:.85;
+  }
+  .back-link:hover{ opacity:1; text-decoration:underline; }
+
+  /* ---- scroll rods ---- */
+  .rod{
+    height:34px;
+    margin-inline:auto;
+    max-width:800px;
+    border-radius:17px;
+    position:relative;
+    background:
+      linear-gradient(180deg, var(--wood-hi) 0%, var(--wood) 45%, var(--wood-lo) 100%);
+    box-shadow:
+      0 3px 0 rgba(0,0,0,.35),
+      0 10px 22px rgba(0,0,0,.55);
+  }
+  .rod::before, .rod::after{
+    content:"";
+    position:absolute;
+    top:-6px; bottom:-6px;
+    width:22px;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 35% 30%, var(--wood-hi) 0%, var(--wood) 55%, var(--wood-lo) 100%);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .rod::before{ left:-11px; }
+  .rod::after{ right:-11px; }
+  .rod-top{ margin-bottom:-6px; }
+  .rod-bottom{ margin-top:-6px; }
+
+  /* ---- parchment body ---- */
+  .parchment{
+    position:relative;
+    background:
+      radial-gradient(ellipse at 15% 8%, rgba(255,255,255,.10), transparent 40%),
+      radial-gradient(ellipse at 85% 92%, rgba(0,0,0,.08), transparent 45%),
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0 2px, transparent 2px 5px),
+      linear-gradient(180deg, var(--parchment) 0%, var(--parchment-2) 100%);
+    padding: 30px clamp(20px, 6vw, 76px) 46px;
+    box-shadow:
+      inset 0 0 60px rgba(80,55,20,.28),
+      inset 0 0 3px rgba(0,0,0,.35),
+      0 0 0 1px rgba(0,0,0,.15);
+  }
+  .parchment::before{
+    content:"";
+    position:absolute; inset:0;
+    pointer-events:none;
+    background:
+      linear-gradient(90deg, var(--parchment-edge) 0%, transparent 3%, transparent 97%, var(--parchment-edge) 100%);
+    opacity:.55;
+    mix-blend-mode:multiply;
+  }
+  .grain{
+    position:absolute; inset:0;
+    pointer-events:none;
+    opacity:.5;
+    mix-blend-mode:multiply;
+  }
+  .crease{
+    position:absolute; top:0; bottom:0; left:50%;
+    width:1px;
+    background:linear-gradient(180deg, transparent, rgba(80,55,20,.22) 15%, rgba(80,55,20,.22) 85%, transparent);
+    pointer-events:none;
+  }
+
+  .content{ position:relative; }
+
+  header{ text-align:center; padding-top:8px; }
+  .kicker{
+    font-size:12.5px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--red);
+    font-weight:600;
+  }
+  h1{
+    font-size:clamp(30px, 5.6vw, 52px);
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin: 10px 0 6px;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  .seal{
+    width:64px; height:64px;
+    margin: 14px auto 10px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #9c433a, var(--red) 55%, #501712 100%);
+    box-shadow: 0 3px 8px rgba(0,0,0,.4), inset 0 0 0 2px rgba(255,235,205,.25);
+    display:flex; align-items:center; justify-content:center;
+    color:#f1dcb8;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.02em;
+  }
+  .subtitle{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:16px;
+    max-width:46ch;
+    margin:0 auto 4px;
+  }
+  .subtitle{ max-width:62ch; font-size:15px; }
+  .rule{
+    width:220px;
+    height:2px;
+    margin:22px auto 30px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    position:relative;
+  }
+  .rule::before{
+    content:"❧";
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-52%);
+    background:var(--parchment);
+    padding:0 10px;
+    color:var(--gold);
+    font-size:15px;
+  }
+
+  .part{ margin-top:44px; }
+  .part-label{
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:18px;
+  }
+  .part-num{
+    font-size:26px;
+    color:var(--red);
+    font-weight:700;
+    letter-spacing:.04em;
+  }
+  .part-name{
+    font-size:13px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .part-line{ flex:1; height:1px; background:linear-gradient(90deg, var(--parchment-edge), transparent); }
+
+  p{
+    font-size:17.5px;
+    line-height:1.72;
+    margin:0 0 20px;
+    color:var(--ink);
+    max-width:66ch;
+  }
+  .part > p:first-of-type::first-letter{
+    float:left;
+    font-size:64px;
+    line-height:.82;
+    padding:6px 8px 0 0;
+    font-weight:700;
+    color:var(--red);
+  }
+
+  .series-note{
+    text-align:center;
+    margin-top:50px;
+    padding-top:26px;
+    border-top:1px solid var(--parchment-edge);
+  }
+  .series-note .mark{
+    font-size:15px;
+    color:var(--gold);
+    letter-spacing:.3em;
+    margin-bottom:10px;
+  }
+  .series-note p{
+    max-width:46ch;
+    margin:0 auto;
+    color:var(--ink);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .series-note .cadence{
+    color:var(--red);
+    font-weight:600;
+    font-style:normal;
+  }
+
+  .sources{
+    margin-top:34px;
+    padding-top:20px;
+    border-top:1px solid var(--parchment-edge);
+  }
+  .sources-title{
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .sources ul{ margin:0; padding-left:18px; }
+  .sources li{
+    font-size:13.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    margin-bottom:5px;
+  }
+  .sources a{ color:var(--red); text-decoration:none; border-bottom:1px solid var(--parchment-edge); }
+  .sources a:hover{ border-bottom-color:var(--red); }
+
+  footer{
+    text-align:center;
+    margin-top:22px;
+    padding-top:0;
+    border-top:none;
+    color:var(--ink-soft);
+    font-style:italic;
+    font-size:14px;
+    letter-spacing:.02em;
+  }
+
+  @media (max-width:520px){
+    p{ font-size:16.5px; }
+    .part > p:first-of-type::first-letter{ font-size:52px; }
+  }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NP09GHE4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7NP09GHE4M');
+</script>
+</head>
+<body>
+<div class="stage">
+  <a class="back-link" href="./">&larr; Back to Commentary</a>
+  <div class="rod rod-top"></div>
+  <div class="parchment">
+    <svg class="grain" width="0" height="0">
+      <filter id="noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0 0.08  0 0 0 0.05 0"/>
+      </filter>
+    </svg>
+    <div class="grain" style="filter:url(#noise);"></div>
+    <div class="crease"></div>
+
+    <div class="content">
+      <header>
+        <div class="kicker">A Commentary &middot; 48th State World News</div>
+        <h1>The Family Business</h1>
+        <div class="seal">2026</div>
+        <p class="subtitle">Jair Bolsonaro was convicted of plotting to overturn an election and, police say, once drafted a plea for asylum abroad. His son Eduardo lobbied a foreign government to save him and lives in Texas with a prison sentence waiting at home. Now his son Flávio has lost an election, refused to accept it, and left for Miami with a court order on his heels. In Brazil, it seems, the apple does not fall far from the tree. It just gets a visa.</p>
+        <div class="rule"></div>
+      </header>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">I</span>
+          <span class="part-name">“I Never Thought About Leaving”</span>
+          <span class="part-line"></span>
+        </div>
+        <p>On the Monday after Brazil’s presidential runoff, Flávio Bolsonaro, a senator and the candidate of the far right, was served a sealed order from Supreme Court Justice Alexandre de Moraes. He had until noon Tuesday to hand over his regular and diplomatic passports. He recorded a video in response. “I will hand over my passports and I will defend myself from this aberration,” he said, according to the Associated Press. He also said: “I never thought about leaving the country.”</p>
+        <p>By Tuesday night he was gone. According to Argentina’s migration authority, Bolsonaro, his wife and their two daughters crossed into Argentina at 10:50 p.m. over the Tancredo Neves bridge, the border crossing near Iguaçu Falls. Forty minutes later the family boarded a private charter whose filed flight plan listed Guayaquil, Ecuador, as its destination. On Wednesday the family landed at Opa-locka Executive Airport outside Miami. A senior U.S. official, speaking anonymously, had said the day before that the State Department would issue visas to Flávio Bolsonaro and his family. According to TIME, he did not hand over his passports by the deadline, and his allies pointed out that he also holds Italian nationality.</p>
+        <p>He had lost to Luiz Inácio Lula da Silva by roughly 4.4 million votes. He did not concede. Instead, as the AP reported, he made unsubstantiated claims of fraud and urged the electoral court to nullify Lula’s candidacy. Within days he was on another continent.</p>
+        <p>The Bolsonaros will tell you this is persecution, and they will tell you Moraes is Lula’s man. Maybe you believe that. But look at what the family has done, one member at a time, over the last few years, and a pattern shows up that has nothing to do with who appointed which judge.</p>
+      </section>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">II</span>
+          <span class="part-name">The Father</span>
+          <span class="part-line"></span>
+        </div>
+        <p>Start with the father. In 2025 a five-justice panel of Brazil’s Supreme Court voted 4–1 to convict Jair Bolsonaro of leading a plot to overturn his 2022 election loss to Lula, and sentenced him to 27 years and three months in prison. Because of his health, he is serving that sentence under house arrest.</p>
+        <p>The coup case was not his only trouble. In March 2024 the Federal Police formally accused him of falsifying his COVID-19 vaccination record. In July 2024 they indicted him for money laundering and criminal association over jewelry the government of Saudi Arabia had given the Brazilian state. Police said he tried to bring in diamond jewelry worth a reported $3 million without declaring it, and that two luxury watches from the same gifts, a Rolex and a Patek Philippe, were sold in the United States for a total of $68,000, with police saying Bolsonaro received cash from the sale. He and his lawyers have denied any wrongdoing.</p>
+        <p>Then there is the detail that matters most for this week. In August 2025 Brazil’s Federal Police said they had found a draft letter, 33 pages long and addressed to Argentina’s president, Javier Milei, asking for political asylum. It was dated February 10, 2024, and police said he saved it two days after officers searched his home and office in the coup investigation. Two days after that, he reportedly began a two-night stay inside the Hungarian embassy in Brasília. Argentina’s government did not respond to the AP’s request for comment, and it is not clear the letter was ever sent.</p>
+        <p>So the father, police say, planned it. The son did it, by way of Argentina.</p>
+      </section>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">III</span>
+          <span class="part-name">The Brother</span>
+          <span class="part-line"></span>
+        </div>
+        <p>Eduardo Bolsonaro, the third son, left for the United States in 2025 while his father’s coup trial was still going. From there, prosecutors said, he lobbied the Trump administration to punish Brazil with tariffs and to put sanctions on Justice Moraes, all to pressure the court into dropping the case against his father. In July 2025 the Trump administration did both: it imposed 50 percent tariffs on Brazil, citing the prosecution of Jair Bolsonaro, and sanctioned Moraes under the Global Magnitsky Act. In June 2026, a Supreme Court panel convicted Eduardo in absentia of coercion in judicial proceedings and sentenced him to about four years in prison. A warrant has since been issued for his arrest. He lives in Texas.</p>
+        <p>Think about what that conviction says. A Brazilian politician was found guilty of asking a foreign government to squeeze his own country’s economy so that his father would not go to prison. Whatever you think of Moraes, the tariffs were real, and the Brazilian workers and farmers who paid for them had nothing to do with the coup case.</p>
+      </section>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">IV</span>
+          <span class="part-name">The Same Crimes</span>
+          <span class="part-line"></span>
+        </div>
+        <p>Now to Flávio. He is not accused of plotting a coup. What makes his story familiar is the kind of money trouble he is accused of, which happens to be the same kind that has followed his father for most of his career.</p>
+        <p>Brazilians have a word for it: rachadinha, from the verb rachar, “to split.” A lawmaker hires staff on the public payroll, and the staff kick part of their salary back to the boss. Some of those staff never show up for work at all. In 2020, prosecutors in Rio de Janeiro filed charges against Flávio for embezzlement, money laundering and criminal association, accusing him of running exactly this scheme out of his office in the state legislature. The man they said collected the cash was Fabrício Queiroz, Flávio’s former driver and a longtime Bolsonaro family aide. Brazil’s financial intelligence unit had flagged about 1.2 million reais in suspicious movements through Queiroz’s accounts. Police raided a chocolate shop Flávio co-owned, and prosecutors said the money was laundered through it and through real estate.</p>
+        <p>That record also turned up payments from Queiroz into the account of Michelle Bolsonaro, Jair’s wife. Jair said Queiroz was repaying a personal debt.</p>
+        <p>Then, in 2021, the UOL news site published audio recordings of Andrea Siqueira Valle, Jair’s former sister-in-law. In them, she describes a man who was supposed to hand back 6,000 reais but paid only 2,000 or 3,000, and says he should be removed because he “never gives me the right money.” As InSight Crime put it at the time, it was the first time Jair Bolsonaro had been tied directly to a rachadinha scheme. The family’s lawyer denied the allegations.</p>
+        <p>Flávio’s case never reached a verdict either. According to the Buenos Aires Times, a court threw out the evidence in 2021, and the charges were dropped in 2022. That is not an acquittal. It means nobody ever ruled on whether it happened.</p>
+        <p>Today Flávio is under investigation at the Supreme Court in two new cases. In the first, he is accused of using a sports betting company to launder money from a fraud in which unauthorized deductions were taken out of pensions paid to Brazilian retirees. The investigation involves transactions linked to a lawyer, Willer Tomaz, who denies wrongdoing. The second involves Daniel Vorcaro, the jailed former owner of Banco Master, whom the Buenos Aires Times describes as jailed over one of Brazil’s biggest-ever fraud cases. Flávio is accused of taking millions of dollars from Vorcaro; according to TIME, the money was raised to fund a movie about his father. Prosecutors suspect, the AP reports, that some of it paid Eduardo’s expenses in the United States and promoted Flávio’s agenda with the Trump administration. Flávio admits Vorcaro funded the film but calls it a legal private deal. He denies wrongdoing in both cases, and none of it has been proven.</p>
+        <p>Line it up. The father, accused by his former sister-in-law of skimming staff salaries, then indicted by police for laundering money from foreign gifts. The son, charged with skimming staff salaries, and now investigated over laundering money from a fraud against retirees. Different decades, different offices, the same kind of accusation. When the same allegation keeps landing on the same family, it gets harder to call it a coincidence. It starts to look like a family business.</p>
+      </section>
+
+      <section class="part">
+        <div class="part-label">
+          <span class="part-num">V</span>
+          <span class="part-name">Why It Matters</span>
+          <span class="part-line"></span>
+        </div>
+        <p>None of this means Flávio Bolsonaro is guilty. He has not been convicted of anything, and the rachadinha case against him died without a verdict. There are real questions about Justice Moraes, too: he has used enormous personal power over Brazilian politics, and there are reports, which he denies, about his own links to the same banker. Reasonable people can believe all of that and still see what happened this week.</p>
+        <p>A man who wanted to be president lost by more than four million votes. He refused to accept it. A court told him to turn in his passport, he said on camera that he had never thought about leaving, and the next night he crossed a border with his family in the dark. He is now in the United States, where his brother, convicted in absentia, has lived in Texas since 2025, and where his father’s political ally sits in the White House. President Trump has said he would approve of Flávio coming, called Brazil’s election “strange” and “terrible,” and said he was not endorsing the result.</p>
+        <p>Brazil has been here before. It had a military dictatorship from 1964 to 1985, and it remembers what happens when powerful men decide the rules are for other people. In 2022 the father lost, refused to say so, and was later convicted of plotting to stay in power anyway. In 2026 the son lost, refused to say so, and left. That is not quite the same thing. But it rhymes.</p>
+        <p>A democracy is not tested by how its leaders win. It is tested by how they lose. This family keeps failing that test, and it keeps finding an exit. The question now belongs to Washington: how long America wants to be that exit.</p>
+      </section>
+
+      <div class="series-note">
+        <div class="mark">&#10087;</div>
+        <p>This is the fourth scroll in an ongoing commentary series from 48th State &mdash; new installments <span class="cadence">roughly every one to two weeks</span>, each one unrolling a story the daily wire can&rsquo;t slow down enough to tell.</p>
+      </div>
+
+      <div class="sources">
+        <div class="sources-title">Sources</div>
+        <ul>
+          <li><a href="https://www.pbs.org/newshour/world/brazils-flavio-bolsonaro-leaves-brazil-for-the-united-states-after-presidential-loss-according-to-multiple-media-reports">Brazil’s Flávio Bolsonaro and his family will get U.S. visas after presidential election loss</a> (PBS NewsHour / AP)</li>
+          <li><a href="https://fortune.com/2026/10/28/flavio-bolsonaro-trump-brazil-miami-corruption-investigation/">Defeated presidential candidate Flávio Bolsonaro fled Brazil for Miami after the Trump administration granted visas</a> (Fortune / AP)</li>
+          <li><a href="https://time.com/article/2026/10/27/brazil-flavio-bolsonaro-money-laundering-supreme-court-lula/">Flávio Bolsonaro flees to Miami after Brazil election loss, defying court order</a> (TIME)</li>
+          <li><a href="https://www.batimes.com.ar/news/amp/latin-america/a-look-at-the-investigations-that-spooked-brazils-flavio-bolsonaro.phtml">A look at the investigations that spooked Brazil’s Flávio Bolsonaro</a> (Buenos Aires Times)</li>
+          <li><a href="https://www.pbs.org/newshour/amp/world/bolsonaro-indicted-by-brazils-police-for-money-laundering-and-criminal-association-sources-say">Bolsonaro indicted by Brazil’s police for money laundering linked to undeclared diamonds</a> (PBS NewsHour / AP, July 2024)</li>
+          <li><a href="https://www.pbs.org/newshour/world/brazilian-police-accuse-bolsonaro-of-planning-to-flee-to-argentina-and-seek-asylum">Brazilian police accuse Bolsonaro of planning to flee to Argentina and seek asylum</a> (PBS NewsHour / AP, August 2025)</li>
+          <li><a href="https://www.aljazeera.com/news/2025/8/21/brazils-ex-president-bolsonaro-planned-asylum-in-argentina-police-say">Brazil’s ex-President Bolsonaro planned asylum in Argentina, police say</a> (Al Jazeera, August 2025)</li>
+          <li><a href="https://www.npr.org/2025/08/21/nx-s1-5509434/brazil-bolsonaro-argentina-coup-asylum">Brazilian police say ex-President Bolsonaro had planned to flee to Argentina</a> (NPR, August 2025)</li>
+          <li><a href="https://www.france24.com/en/americas/20250731-trump-slaps-massive-tariffs-sanctions-on-brazil-over-bolsonaro-trial">Trump slaps massive tariffs, sanctions on Brazil over Bolsonaro trial</a> (France 24 / AFP, July 2025)</li>
+          <li><a href="https://www.yahoo.com/news/articles/trump-signs-order-justify-50-191230813.html">Trump signs order to justify 50% tariffs on Brazil</a> (AP via Yahoo News, 2025)</li>
+          <li><a href="https://www.aljazeera.com/news/2026/10/9/brazilian-supreme-court-judge-issues-arrest-warrant-for-eduardo-bolsonaro">Brazilian Supreme Court judge issues arrest warrant for Eduardo Bolsonaro</a> (Al Jazeera, October 2026)</li>
+          <li><a href="https://insightcrime.org/news/rachadinha-corruption-scheme-haunting-bolsonaro-brazil/">A brief history of “rachadinha,” the corruption scheme haunting Brazil’s Bolsonaro</a> (InSight Crime)</li>
+          <li><a href="https://insightcrime.org/news/bolsonaro-family-corruption-scandals/">From sons to ex-wife, corruption scandals plague Brazil president’s family</a> (InSight Crime, 2020)</li>
+        </ul>
+      </div>
+
+      <footer>Written &amp; researched October 2026 &middot; 48th State World News</footer>
+    </div>
+  </div>
+  <div class="rod rod-bottom"></div>
+</div>
+</body>
+</html>
